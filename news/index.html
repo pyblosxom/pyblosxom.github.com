@@ -1,0 +1,489 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/frameset.dtd">
+
+<html>
+<head>
+   <title>Pyblosxom - main site</title>
+   <link rel="stylesheet" href="/default.css" type="text/css" />
+   <link rel="alternate" type="application/xml" title="RSS" href="/news/index.xml" />
+   <link rel="top" href="/" title="pyblosxom.bluesock.org" />
+   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+
+<body>
+<table width="100%">
+<tr>
+  <td valign="top" width="200" class="menu">
+
+<p><b>Contents</b></p>
+<p>
+  <a href="/" class="menulink">home</a><br />
+  <a href="/news/" class="menulink">news</a><br />
+  <a href="/bugs/" class="menulink">bugtracker</a><br />
+  <a href="/static/documentation.html" class="menulink">documentation</a><br />
+  <a href="/1.5/dev_contributing.html" class="menulink">patches</a><br />
+</p>
+
+<p><b>Community</b></p>
+<p>
+  <!-- broken <a href="/pyblosxom_users.html" class="menulink">pyblosxom users</a><br /> -->
+  <a href="/registry/flavours/" class="menulink">flavour registry</a><br />
+  <a href="/registry/" class="menulink">plugin registry</a><br />   
+  <a href="/#pyblosxomusers" class="menulink">pyblosxom-users list</a><br />
+  <a href="/#pyblosxomdevel" class="menulink">pyblosxom-devel list</a><br />
+  <a href="/#irc" class="menulink">irc</a><br />
+</p>
+
+<p><b>Install</b></p>
+<pre>
+pip install pyblosxom
+</pre>
+
+<p><b>Download</b></p>
+<p>
+  <a href="/download/" class="menulink">download</a><br />
+</p>
+
+<p><b>News Archives</b></p>
+<p>
+  <a href="/2012/index.html">2012</a><br />
+<a href="/2011/index.html">2011</a><br />
+<a href="/2010/index.html">2010</a><br />
+<a href="/2009/index.html">2009</a><br />
+<a href="/2008/index.html">2008</a><br />
+<a href="/2007/index.html">2007</a><br />
+<a href="/2006/index.html">2006</a><br />
+<a href="/2005/index.html">2005</a><br />
+<a href="/2004/index.html">2004</a><br />
+</p>
+
+<p><b>Syndicate</b></p>
+<p>
+  <a href="/news/index.xml" class="menulink"><img border="0" src="/images/xml.gif" alt="news RSS 2.0"> news RSS</a><br />
+</p>
+
+<p>
+<a href="http://pyblosxom.github.com/"><img src="/images/pb_pyblosxom.gif" border="0" alt="powered by pyblosxom"/></a>
+</p>
+  </td>
+  <td valign="top">
+
+
+<h2>Wed, 27 Jun 2012</h2>
+<div class="news">
+<h3>Handover and update</h3>
+<div class="content">
+<p>
+  After a significant number of years (since approx 2003) running PyBlosxom, willg has stepped down from managing the project and 
+  passed it over to me, Akai.<br>
+  will, thank you for your considerable effort in making PyBlosxom the program we know and love today.<br>
+  <br>
+  I'm available on the mailing lists and frequently on the IRC channel (as AkaiKitsune) for any question or issue I can help with.<br>
+  Part of the handoff is the move from the bluesock.org domain to github for both the site and the repositories.<br>
+  Update your bookmarks to http://pyblosxom.github.com/, that's our new home!
+</p>
+
+<p>
+  -Akai
+</p>
+
+
+<div class="blosxomStoryLinks">
+[
+category: <a href="/news" title="Category">/news</a> |
+<a href="/news/2012-06-27.html" title="Permalink">Permalink</a>
+]
+</div>
+</div>
+</div>
+<h2>Fri, 30 Dec 2011</h2>
+<div class="news">
+<h3>Pyblosxom 1.5.2 released!</h3>
+<div class="content">
+<p>This fixes two issues:</p>
+<ol class="arabic simple">
+<li>removed debug logging from pycategories</li>
+<li>fixed a warning when doing <tt class="docutils literal">pip install pyblosxom</tt></li>
+</ol>
+<div class="section" id="where-to-get-it">
+<h3>Where to get it</h3>
+<p>We're pushing PyPI now.  To install Pyblosxom:</p>
+<pre class="literal-block">
+pip install pyblosxom
+</pre>
+<p>To upgrade:</p>
+<pre class="literal-block">
+pip install --upgrade pyblosxom
+</pre>
+<p>For tarballs, source code, and other things, see the website.</p>
+</div>
+<div class="section" id="how-to-get-help">
+<h3>How to get help</h3>
+<p>If you have any problems, say hi on IRC or send an email to the
+pyblosxom-users mailing list.  Details are on <a class="reference external" href="http://pyblosxom.github.com/">the website</a>.</p>
+</div>
+
+
+<div class="blosxomStoryLinks">
+[
+category: <a href="/news" title="Category">/news</a> |
+<a href="/news/pyblosxom-1.5.2.html" title="Permalink">Permalink</a>
+]
+</div>
+</div>
+</div>
+<h2>Thu, 29 Dec 2011</h2>
+<div class="news">
+<h3>Pyblosxom 1.5.1 released!</h3>
+<div class="content">
+<p>This fixes two issues:</p>
+<ol class="arabic simple">
+<li>manifest was missing README.rst which hosed <tt class="docutils literal">python setup.py install</tt></li>
+<li>the WHATSNEW page had the wrong version and date for the 1.5 release</li>
+</ol>
+<p>The first is bad and worth putting out a new release.  Sorry about
+that.  Many thanks to ntoll who popped on IRC and let us know.</p>
+<div class="section" id="where-to-get-it">
+<h3>Where to get it</h3>
+<p>We're pushing PyPI now.  To install Pyblosxom:</p>
+<pre class="literal-block">
+pip install pyblosxom
+</pre>
+<p>To upgrade:</p>
+<pre class="literal-block">
+pip install --upgrade pyblosxom
+</pre>
+<p>For tarballs, source code, and other things, see the website.</p>
+</div>
+<div class="section" id="how-to-get-help">
+<h3>How to get help</h3>
+<p>If you have any problems, say hi on IRC or send an email to the
+pyblosxom-users mailing list.  Details are on <a class="reference external" href="http://pyblosxom.github.com/">the website</a>.</p>
+</div>
+
+
+<div class="blosxomStoryLinks">
+[
+category: <a href="/news" title="Category">/news</a> |
+<a href="/news/pyblosxom-1.5.1.html" title="Permalink">Permalink</a>
+]
+</div>
+</div>
+</div>
+<h2>Wed, 28 Dec 2011</h2>
+<div class="news">
+<h3>Pyblosxom 1.5 final released</h3>
+<div class="content">
+<div class="section" id="release">
+<h3>Release!</h3>
+<p>It's been a long road for Pyblosxom 1.5.  The first time I said that
+PyBlosxom 1.5 was pretty much done was in June of 2009.  That turned
+out to be hilariously wrong and development continued for another two
+and a half years.</p>
+<p>In that period of time, we switched from svn to git and put the
+project on Gitorious, we switched bug trackers, we had like 350
+commits, we added tests, we started using a wiki, we abandoned the
+wiki, we renamed the project, we overhauled the documentation a few
+times, we added plugins, we removed plugins, we did the hokey-pokey
+and moved the rest of them around a few times, we moved the project to
+GitHub, we started using IRC more heavily, we had three release
+candidates, and a bunch of other things.</p>
+<p>Was Pyblosxom 1.5 worth it?  Definitely---it's a magnificent
+improvement over 1.4.3.  I highly recommend upgrading.</p>
+<p>For complete details of what's new in 1.5, read the <a class="reference external" href="http://pyblosxom.github.com/1.5/whatsnew.html">WHATSNEW section
+of the manual</a>.
+Here are some highlights:</p>
+<ol class="arabic simple">
+<li>We changed the name of the project to Pyblosxom.  Down with camel case.</li>
+<li>Plugins are now part of the package.  When you upgrade Pyblosxom in
+the future, core plugins will automatically get upgraded, too.
+Plugin documentation is now part of the manual.  There are some new
+plugins, some rewritten plugins, and a bunch of plugins have seen
+significant improvements.</li>
+<li>pyblosxom-cmd is vastly improved.  Creating a new blog is much
+easier than in previous versions.</li>
+<li>Better crash handling.  Pyblosxom now has a crash page that makes
+it easier to figure out why it's crashing and either fix it or tell
+someone the information they need to know to fix it.</li>
+<li>Improved documentation.</li>
+<li>Vastly cleaner code, more tests, and better project infrastructure.</li>
+<li>More options for static rendering.</li>
+</ol>
+<p>Yay for Pyblosxom 1.5!</p>
+</div>
+<div class="section" id="where-to-get-it">
+<h3>Where to get it</h3>
+<p>We're pushing PyPI now.  To install Pyblosxom:</p>
+<pre class="literal-block">
+pip install pyblosxom
+</pre>
+<p>To upgrade:</p>
+<pre class="literal-block">
+pip install --upgrade pyblosxom
+</pre>
+<p>For tarballs, source code, and other things, see the website.</p>
+</div>
+<div class="section" id="how-to-get-help">
+<h3>How to get help</h3>
+<p>If you have any problems, say hi on IRC or send an email to the
+pyblosxom-users mailing list.  Details are on <a class="reference external" href="http://pyblosxom.github.com/">the website</a>.</p>
+</div>
+
+
+<div class="blosxomStoryLinks">
+[
+category: <a href="/news" title="Category">/news</a> |
+<a href="/news/pyblosxom-1.5.html" title="Permalink">Permalink</a>
+]
+</div>
+</div>
+</div>
+<h2>Mon, 12 Dec 2011</h2>
+<div class="news">
+<h3>Status December 12th, 2011</h3>
+<div class="content">
+<p>It's been a while since the last status update and a lot has happened
+since then:</p>
+<ul class="simple">
+<li>renamed the project from PyBlosxom to Pyblosxom</li>
+<li>folded core plugins into the Pyblosxom core</li>
+<li>moved the pyblosxom repository from gitorious to github</li>
+<li>added new plugins, bug fixes, more tests, fixed documentation, ...</li>
+</ul>
+<p>We're pretty close to a 1.5 final release.  This release has been a long time
+coming and it'll be good to get it out.  I'm hoping it'll happen in the next
+week.</p>
+
+
+<div class="blosxomStoryLinks">
+[
+category: <a href="/news" title="Category">/news</a> |
+<a href="/news/2011-12-12.html" title="Permalink">Permalink</a>
+]
+</div>
+</div>
+</div>
+<h2>Sat, 18 Jun 2011</h2>
+<div class="news">
+<h3>PyBlosxom 1.5rc3 released</h3>
+<div class="content">
+<p>
+  We did 1.5 rc2 10 months ago.  Since then we've added a few new plugins,
+  fixed a bunch of bugs, worked on making the documentation better, updated
+  docstrings, and some other stuff.
+</p>
+<p>
+  There are still a bunch of polish things that need to be done, so we're
+  going to do another release candidate.
+</p>
+<p>
+  Download the new version at 
+  <a href="/download/pyblosxom-1.5rc3.tar.gz">pyblosxom-1.5rc3.tag.gz</a>.
+</p>
+<p>
+  If you have any problems, say hi on IRC (<code>#pyblosxom</code>
+  on <code>irc.freenode.net</code>), send an email to the pyblosxom-users 
+  mailing list, or send me an email at <code>willg at bluesock dot org</code>.
+</p>
+<p>
+/will (willg at bluesock dot org)
+</p>
+
+
+<div class="blosxomStoryLinks">
+[
+category: <a href="/news" title="Category">/news</a> |
+<a href="/news/pyblosxom-1.5rc3.html" title="Permalink">Permalink</a>
+]
+</div>
+</div>
+</div>
+<h2>Sat, 19 Mar 2011</h2>
+<div class="news">
+<h3>Status March 19th, 2011</h3>
+<div class="content">
+<p>
+  We've done a ton of work over the last 3 and a half months.  One thing
+  that I finally got around to was overhauling the web-site.  The new
+  web-site is (I think) a lot better, more informative, and easier to
+  use.
+</p>
+<p>
+  Things that still need to be done:
+</p>
+<ol>
+<li>update the plugin registry
+<li>update the flavour registry
+<li>compile the 1.5 documentation and push that to the site
+</ol>
+<p>
+  There are still a series of outstanding tasks for PyBlosxom 1.5 that should
+  get finished before we release 1.5 final.  We're working on them.  We
+  could use your help!
+</p>
+<ul>
+<li>check PyBlosxom 1.5 in git to see if it works with your blog and plugins
+<li>run the unit tests
+<li>edit and update documentation
+<li>triage and fix bugs in the 1.5 milestone in the bug tracker
+</ul>
+<p>
+  We just finished up a sprint week and we're eager to finish up 1.5 and
+  get it out.  Hopefully, we'll get that done in the next week or two.
+</p>
+<p>
+  /will (willg at bluesock dot org)
+</p>
+
+
+<div class="blosxomStoryLinks">
+[
+category: <a href="/news" title="Category">/news</a> |
+<a href="/news/2011-03-19.html" title="Permalink">Permalink</a>
+]
+</div>
+</div>
+</div>
+<h2>Sat, 08 Jan 2011</h2>
+<div class="news">
+<h3>Status January 8th, 2011</h3>
+<div class="content">
+<p>
+  Development slowed down during the second half of 2010 because I was
+  bogged down with other things.  I recognize how that totally sucks
+  for the project.  I'm working on rectifying it now.
+</p>
+<p>
+  Previously, we were using the SF bug tracker which sucked.  Since
+  we did much with it, it's undergone a user interface overhaul and it's
+  better, but it's still missing features this project needs.  So we
+  stopped using it and I directed people to file bug reports by sending
+  email to the pyblosxom-devel mailing list.
+</p>
+<p>
+  In October of 2010, we discussed issue trackers.  Then I went on
+  hiatus for a little over a month.  I've returned now and set up Roundup
+  to host PyBlosxom issues and feature requests.  With help from Asheesh
+  and the awesome folks at <a href="http://openhatch.org">OpenHatch</a>
+  I added support for tracking milestones.  I've moved all open bugs
+  and features from the SF bug tracker to the new bug tracker.
+</p>
+<p>
+  You can find it at <a href="http://pyblosxom.bluesock.org/bugs/">http://pyblosxom.bluesock.org/bugs/</a>.
+</p>
+<p>
+  I also got through the queue of merge requests from Dieter.  I
+  really apologize for sitting on those for so long.  I really appreciate
+  the work he did on them.
+</p>
+<p>
+  I want to move ahead and get a PyBlosxom 1.5 rc3 out soon.  We're still
+  fixing problems in plugins and working on getting PyBlosxom and the core
+  plugins to a stable state--hence the need for ongoing release candidates
+  rather than a final release.
+</p>
+<p>
+  I want to thank Dieter for his prodding.  Also, Tim, Marius, Bill, Michael,
+  Glennie, Sean, Sebastian, and Asheesh for their participation, efforts, 
+  thoughts, and other positive energy things on #miro-hackers and the
+  pyblosxom-devel list.  I'm looking forward to the rest of 2011, cleaning
+  up the project and making it better for everyone.
+</p>
+<p>
+  /will (willg at bluesock dot org)
+</p>
+
+
+<div class="blosxomStoryLinks">
+[
+category: <a href="/news" title="Category">/news</a> |
+<a href="/news/2011-01-08.html" title="Permalink">Permalink</a>
+]
+</div>
+</div>
+</div>
+<h2>Tue, 03 Aug 2010</h2>
+<div class="news">
+<h3>PyBlosxom 1.5rc2 released</h3>
+<div class="content">
+<p>
+  It's been about 6 months since 1.5 rc1.  Since then we've been updating
+  plugins, added some new plugins, adding tests, fixed documentation, 
+  added a sortlist callback, updated docstrings, switched from subversion
+  to git, moved from SourceForge to Bluesock, and some other stuff.
+</p>
+<p>
+  Doing another release candidate because there's still a lot of work to
+  do updating plugins, adding tests, and fixing documentation.
+</p>
+<p>
+  Download the new version at 
+  <a href="/download/pyblosxom-1.5rc2.tar.gz">pyblosxom-1.5rc2.tag.gz</a>.
+</p>
+<p>
+  If you have any problems, say hi on IRC (<code>#pyblosxom</code>
+  on <code>irc.freenode.net</code>), send an email to the pyblosxom-users 
+  mailing list, or send me an email at <code>willg at bluesock dot org</code>.
+</p>
+<p>
+/will (willg at bluesock dot org)
+</p>
+
+
+<div class="blosxomStoryLinks">
+[
+category: <a href="/news" title="Category">/news</a> |
+<a href="/news/pyblosxom-1.5rc2.html" title="Permalink">Permalink</a>
+]
+</div>
+</div>
+</div>
+<h2>Sat, 17 Apr 2010</h2>
+<div class="news">
+<h3>New site, new conventions, almost new version</h3>
+<div class="content">
+<p>
+  We're moving from SourceForge to Bluesock.  Bluesock is my own personal
+  server where I'll have a lot more control over the site in terms of how
+  it's built.  On SourceForge we're severely limited to static pages or
+  the various applications that they install.  It's been a real pain in
+  the ass.
+</p>
+<p>
+  Additionally, I've gone through the site and updated it to reflect our
+  move from svn to git.
+</p>
+<p>
+  On top of that, we're ditching the SourceForge bug tracker.  We don't
+  have a bug tracker set up, though, so we're just going to wing it with
+  the pyblosxom-devel mailing list.  If it becomes necessary, we'll set
+  up a new bug tracker.
+</p>
+<p>
+  PyBlosxom 1.5 is almost done.  A handful of things have been done since
+  the release candidate a while back.  The documentation still needs another
+  going over and parts of it need to be updated.
+</p>
+<p>
+  Hopefully all that will happen soon.
+</p>
+<p>
+  /will
+</p>
+
+
+<div class="blosxomStoryLinks">
+[
+category: <a href="/news" title="Category">/news</a> |
+<a href="/news/2010-04-17.html" title="Permalink">Permalink</a>
+]
+</div>
+</div>
+</div>
+  </td>
+</tr>
+</table>
+<p>
+  Built with pyblosxom 1.5.2. Website content and documentation is released under the <a href="http://creativecommons.org/publicdomain/zero/1.0/">CC0 Licence</a>.
+</p>
+</body>
+</html>

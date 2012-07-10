@@ -1,0 +1,333 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Writing Entries &mdash; PyBlosxom 1.5.2 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '1.5.2',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="PyBlosxom 1.5.2 documentation" href="index.html" />
+    <link rel="next" title="Flavours and Templates" href="flavours_and_templates.html" />
+    <link rel="prev" title="Configuring Pyblosxom" href="config_variables.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="flavours_and_templates.html" title="Flavours and Templates"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="config_variables.html" title="Configuring Pyblosxom"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">PyBlosxom 1.5.2 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="writing-entries">
+<h1>Writing Entries<a class="headerlink" href="#writing-entries" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="categories">
+<span id="id1"></span><h2>Categories<a class="headerlink" href="#categories" title="Permalink to this headline">¶</a></h2>
+<p>Writing entries in Pyblosxom is fairly straightforward.  Each entry is
+a single text file located somewhere in the directory tree of your
+datadir.  The directory that the entry is in is the category the entry
+is &#8220;filed under&#8221;.</p>
+<p>For example, if my datadir was <tt class="docutils literal"><span class="pre">/home/joe/myblog/entries</span></tt> and I
+stored an entry named <tt class="docutils literal"><span class="pre">firstpost.txt</span></tt> in
+<tt class="docutils literal"><span class="pre">/home/joe/myblog/entries/status</span></tt> then the category for my entry
+would be <tt class="docutils literal"><span class="pre">/status</span></tt>.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p>A warning about category names:</p>
+<p class="last">Be careful when you create your categories&#8212;be sure to use
+characters that are appropriate in directory names for the file
+system you&#8217;re using.</p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Categories are NOT the same thing as tags.  An entry can only
+belong to ONE category.  If that&#8217;s not what you want, you should
+write or install a tags plugin.</p>
+</div>
+<p>Don&#8217;t worry about making sure you have all the categories you need up
+front&#8212;you can add them as you need them.</p>
+</div>
+<div class="section" id="the-format-of-an-entry">
+<h2>The format of an entry<a class="headerlink" href="#the-format-of-an-entry" title="Permalink to this headline">¶</a></h2>
+<p>Pyblosxom entries consist of three parts: the title, the metadata, and
+then the body of the entry.  The first line is the title of the entry.
+Then comes zero or more lines of metadata.  After the metadata comes
+the body of the entry.</p>
+<div class="section" id="title">
+<h3>Title<a class="headerlink" href="#title" title="Permalink to this headline">¶</a></h3>
+<p>The title consists of a single line of plain text.  You can have
+whatever characters you like in the title of your entry.  The title
+doesn&#8217;t have to be the same as the entry file name.</p>
+</div>
+<div class="section" id="metadata">
+<h3>Metadata<a class="headerlink" href="#metadata" title="Permalink to this headline">¶</a></h3>
+<p>The metadata section is between the title and the body of the entry.
+It consists of a series of lines that start with the hash mark <tt class="docutils literal"><span class="pre">#</span></tt>,
+then a metadata variable name, then a space, then the value of the
+metadata item.</p>
+<p>Example of metadata lines:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="c">#mood bored</span>
+<span class="c">#music The Doors - Greatest Hits Vol 1</span>
+</pre></div>
+</div>
+<p>The metadata variables set in the metadata section of the entry are
+available in your story template.  So for the above example, the
+template variable <tt class="docutils literal"><span class="pre">$(mood)</span></tt> would be filled in with <tt class="docutils literal"><span class="pre">bored</span></tt> and
+<tt class="docutils literal"><span class="pre">$*music)</span></tt> would be filled in with <tt class="docutils literal"><span class="pre">The</span> <span class="pre">Doors</span> <span class="pre">-</span> <span class="pre">Greatest</span> <span class="pre">Hits</span> <span class="pre">Vol</span>
+<span class="pre">1</span></tt>.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>Metadata is not collected in a multi-dict.  If you include two
+pieces of metadata with the same key, the second one will overwrite
+the first one.</p>
+<p>Example:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="c">#mood bored</span>
+<span class="c">#mood happy</span>
+</pre></div>
+</div>
+<p class="last">will result in <tt class="docutils literal"><span class="pre">'mood'</span></tt> &#8211;&gt; <tt class="docutils literal"><span class="pre">'happy'</span></tt> in the metadata.</p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">You can provide metadata keys with no value.  If you do this, then
+the default value is <tt class="docutils literal"><span class="pre">'1'</span></tt>.  This seems a bit weird, but it makes
+it easier for plugin developers to use these as flags.</p>
+</div>
+</div>
+<div class="section" id="body">
+<h3>Body<a class="headerlink" href="#body" title="Permalink to this headline">¶</a></h3>
+<p>The body of the entry is written in HTML and comprises the rest of the
+entry file.</p>
+</div>
+<div class="section" id="examples">
+<h3>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h3>
+<p>Here&#8217;s an example first post entry with a title and a body:</p>
+<div class="highlight-python"><pre>This is my first post!
+&lt;p&gt;
+  This is the body of the first post to my blog.
+&lt;/p&gt;</pre>
+</div>
+<p>Here&#8217;s a more complex example with a title and a body:</p>
+<div class="highlight-python"><pre>The rain in Spain....
+&lt;p&gt;
+  The rain
+&lt;/p&gt;
+&lt;p align="center"&gt;
+  in Spain
+&lt;/p&gt;
+&lt;p align="right"&gt;
+  is &lt;font color="ff0000"&gt;mainly&lt;/font&gt; on the plain.
+&lt;/p&gt;</pre>
+</div>
+<p>Here&#8217;s an example of a post with title, metadata, and a body:</p>
+<div class="highlight-python"><pre>The rain in Spain....
+#mood bored
+#music The Doors - Greatest Hits Vol 1
+&lt;p&gt;
+  The rain
+&lt;/p&gt;
+&lt;p align="center"&gt;
+  in Spain
+&lt;/p&gt;
+&lt;p align="right"&gt;
+  is &lt;font color="ff0000"&gt;mainly&lt;/font&gt; on the plain.
+&lt;/p&gt;</pre>
+</div>
+</div>
+</div>
+<div class="section" id="posting-date">
+<h2>Posting date<a class="headerlink" href="#posting-date" title="Permalink to this headline">¶</a></h2>
+<p>The posting date of the entry file is the modification time (also
+known as mtime) of the file itself as stored by your file system.
+Every time you go to edit an entry, it changes the modification time.
+You can see this in the following example of output:</p>
+<div class="highlight-python"><pre>willg ~/blog/entries/blosxom/site: vi testpost.txt                     [1]
+willg ~/blog/entries/blosxom/site: ls -l
+total 16
+-rw-r--r--  1 willg willg 764 Jul 20  2003 minoradjustments.txt
+-rw-r--r--  1 willg willg 524 Jul 24  2003 moreminoradjustments.txt
+-rw-r--r--  1 willg willg 284 Aug 15  2004 nomorecalendar.txt
+-rw-r--r--  1 willg willg  59 Mar 21 16:30 testpost.txt                [2]
+willg ~/blog/entries/blosxom/site: vi testpost.txt                     [3]
+willg ~/blog/entries/blosxom/site: ls -l
+total 16
+-rw-r--r--  1 willg willg 764 Jul 20  2003 minoradjustments.txt
+-rw-r--r--  1 willg willg 524 Jul 24  2003 moreminoradjustments.txt
+-rw-r--r--  1 willg willg 284 Aug 15  2004 nomorecalendar.txt
+-rw-r--r--  1 willg willg  59 Mar 21 16:34 testpost.txt                [4]</pre>
+</div>
+<ol class="arabic simple">
+<li>I create the blog entry <tt class="docutils literal"><span class="pre">testpost.txt</span></tt> using <tt class="docutils literal"><span class="pre">vi</span></tt> (vi is a text
+editor).  The mtime of the file will be the time I last save the
+file and exit out of vi.</li>
+<li>Note that the mtime on the file is <tt class="docutils literal"><span class="pre">Mar</span> <span class="pre">21</span> <span class="pre">16:30</span></tt>.  That&#8217;s when I
+last saved the blog entry and exited out of vi.</li>
+<li>I discover that I made a spelling mistake in my entry...  So I edit
+it again in vi and fix the mistake.  The mtime of the entry has now
+changed!</li>
+<li>Now the mtime of the file is <tt class="docutils literal"><span class="pre">Mar</span> <span class="pre">21</span> <span class="pre">16:34</span></tt>.  This is the time
+that will show up in my blog as the posting date.</li>
+</ol>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p>A warning about mtimes:</p>
+<p>There are some issues with this method for storing the posting
+date.</p>
+<p>First, if you ever change the blog entry, the mtime will change as
+well.  That makes updating blog entries very difficult down the
+line.</p>
+<p class="last">Second, if you move files around (backup/restore, changing the
+category structure, ...), you need to make sure you do so in a way
+that maintains the file&#8217;s mtime.</p>
+</div>
+</div>
+<div class="section" id="entry-parsers">
+<span id="id2"></span><h2>Entry parsers<a class="headerlink" href="#entry-parsers" title="Permalink to this headline">¶</a></h2>
+<p>Pyblosxom supports one format for entry files by default.  This format
+is the same format that blosxom uses and is described in previous
+sections.</p>
+<p>A sample blog entry could look like this:</p>
+<div class="highlight-python"><pre>First post
+&lt;p&gt;
+  Here's the body of my first post.
+&lt;/p&gt;</pre>
+</div>
+<p>Some people don&#8217;t like writing in HTML.  Other people use their
+entries in other places, so they need a different markup format.  Some
+folks write a lot of material in a non-HTML markup format and would
+like to use that same format for blog entries.  These are all very
+valid reasons to want to use other markup formats.</p>
+<p>Pyblosxom allows you to install entry parser plugins which are
+Pyblosxom plugins that implement an entry parser.  These entry parser
+plugins allow you to use other markup formats.  Check the Plugin
+Registry on the <a class="reference external" href="http://pyblosxom.github.com/">website</a> for other available entry parsers.
+Pyblosxom comes with a restructured text entry parser.</p>
+<p>If you don&#8217;t see your favorite markup format represented, try looking
+at the code for other entry parsers and implement it yourself.  If you
+need help, please ask on the pyblosxom-devel mailing list or on IRC.
+Details for both of these are on the <a class="reference external" href="http://pyblosxom.github.com/">website</a>.</p>
+<p>Additionally, you&#8217;re not locked into using a single markup across your
+blog.  You can use any markup for an entry that you have an entry
+parser for.</p>
+</div>
+<div class="section" id="beyond-editors">
+<h2>Beyond editors<a class="headerlink" href="#beyond-editors" title="Permalink to this headline">¶</a></h2>
+<p>There&#8217;s no reason that all your entries have to come from editing blog
+entry text files in your datadir.  Check the Pyblosxom Registry for
+scripts and other utilities that generate entries from other input
+sources.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Writing Entries</a><ul>
+<li><a class="reference internal" href="#categories">Categories</a></li>
+<li><a class="reference internal" href="#the-format-of-an-entry">The format of an entry</a><ul>
+<li><a class="reference internal" href="#title">Title</a></li>
+<li><a class="reference internal" href="#metadata">Metadata</a></li>
+<li><a class="reference internal" href="#body">Body</a></li>
+<li><a class="reference internal" href="#examples">Examples</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#posting-date">Posting date</a></li>
+<li><a class="reference internal" href="#entry-parsers">Entry parsers</a></li>
+<li><a class="reference internal" href="#beyond-editors">Beyond editors</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="config_variables.html"
+                        title="previous chapter">Configuring Pyblosxom</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="flavours_and_templates.html"
+                        title="next chapter">Flavours and Templates</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/writing_entries.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="flavours_and_templates.html" title="Flavours and Templates"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="config_variables.html" title="Configuring Pyblosxom"
+             >previous</a> |</li>
+        <li><a href="index.html">PyBlosxom 1.5.2 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright Creative Commons CC0 - http://creativecommons.org/publicdomain/zero/1.0/.
+      Last updated on Jul 10, 2012.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>

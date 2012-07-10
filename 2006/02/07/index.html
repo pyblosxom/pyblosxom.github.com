@@ -1,0 +1,146 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/frameset.dtd">
+
+<html>
+<head>
+   <title>Pyblosxom - main site</title>
+   <link rel="stylesheet" href="/default.css" type="text/css" />
+   <link rel="alternate" type="application/xml" title="RSS" href="/news/index.xml" />
+   <link rel="top" href="/" title="pyblosxom.bluesock.org" />
+   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+
+<body>
+<table width="100%">
+<tr>
+  <td valign="top" width="200" class="menu">
+
+<p><b>Contents</b></p>
+<p>
+  <a href="/" class="menulink">home</a><br />
+  <a href="/news/" class="menulink">news</a><br />
+  <a href="/bugs/" class="menulink">bugtracker</a><br />
+  <a href="/static/documentation.html" class="menulink">documentation</a><br />
+  <a href="/1.5/dev_contributing.html" class="menulink">patches</a><br />
+</p>
+
+<p><b>Community</b></p>
+<p>
+  <!-- broken <a href="/pyblosxom_users.html" class="menulink">pyblosxom users</a><br /> -->
+  <a href="/registry/flavours/" class="menulink">flavour registry</a><br />
+  <a href="/registry/" class="menulink">plugin registry</a><br />   
+  <a href="/#pyblosxomusers" class="menulink">pyblosxom-users list</a><br />
+  <a href="/#pyblosxomdevel" class="menulink">pyblosxom-devel list</a><br />
+  <a href="/#irc" class="menulink">irc</a><br />
+</p>
+
+<p><b>Install</b></p>
+<pre>
+pip install pyblosxom
+</pre>
+
+<p><b>Download</b></p>
+<p>
+  <a href="/download/" class="menulink">download</a><br />
+</p>
+
+<p><b>News Archives</b></p>
+<p>
+  <a href="/2012/index.html">2012</a><br />
+<a href="/2011/index.html">2011</a><br />
+<a href="/2010/index.html">2010</a><br />
+<a href="/2009/index.html">2009</a><br />
+<a href="/2008/index.html">2008</a><br />
+<a href="/2007/index.html">2007</a><br />
+<a href="/2006/index.html">2006</a><br />
+<a href="/2005/index.html">2005</a><br />
+<a href="/2004/index.html">2004</a><br />
+</p>
+
+<p><b>Syndicate</b></p>
+<p>
+  <a href="/news/index.xml" class="menulink"><img border="0" src="/images/xml.gif" alt="news RSS 2.0"> news RSS</a><br />
+</p>
+
+<p>
+<a href="http://pyblosxom.github.com/"><img src="/images/pb_pyblosxom.gif" border="0" alt="powered by pyblosxom"/></a>
+</p>
+  </td>
+  <td valign="top">
+
+
+<h2>Tue, 07 Feb 2006</h2>
+<div class="news">
+<h3>PyBlosxom 1.3.1 released</h3>
+<div class="content">
+<p>
+  <b>Pertinent to users:</b>
+</p>
+<ol>
+<li><p>
+   The "num_entries" property now affects the home page and category
+   index pages.  It no longer affects archive index pages.
+</p></li>
+<li><p>
+   Fixed the RSS 0.9.1 feed templates.  It has the correct link url
+   and shows the entry bodies.  Thanks Norbert!
+</p></li>
+<li><p>
+   The version string is correct.
+</p></li>
+<li><p>
+   Added support for $body_escaped .
+</p></li>
+<li><p>
+   Fixed the blog encoding on the RSS 2.0 feed so that it uses the
+   value provided in the config.py $blog_encoding variable.
+</p></li>
+<li><p>
+   Fixed the Atom 1.0 story flavour to use $body_escaped instead of
+   &lt;![CDATA[ $body ]]&gt;
+</p></li>
+<li><p>
+   Fixed a problem with static rendering where we'd render "/index.html"
+   and "//index.html" if the user had entries in their root category.
+</p></li>
+</ol>
+
+<p>
+  <b>Pertinent to developers:</b>
+</p>
+<ol>
+<li><p>
+   If you have plugins that use the logger functions in PyBlosxom 1.2,
+   you need to update those plugins to use the new logger functions in
+   PyBlosxom 1.3.  Read through the API for details.
+</p></li>
+<li><p>
+   Moved documentation in ReadMeForPlugins.py over to the manual.
+</p></li>
+</ol>
+<p>
+  Also, I did a lot more work on the manual.  I folded in the documentation
+  from ReadMeForPlugins, added a lot more "markers" for examples, added
+  a static rendering sample configuration, and folded in some material
+  from my blog.
+</p>
+<p>
+/will (willhelm at users dot sourceforge dot net)
+</p>
+
+
+<div class="blosxomStoryLinks">
+[
+category: <a href="/news" title="Category">/news</a> |
+<a href="/news/pyblosxom.1.3.1.html" title="Permalink">Permalink</a>
+]
+</div>
+</div>
+</div>
+  </td>
+</tr>
+</table>
+<p>
+  Built with pyblosxom 1.5.2. Website content and documentation is released under the <a href="http://creativecommons.org/publicdomain/zero/1.0/">CC0 Licence</a>.
+</p>
+</body>
+</html>
