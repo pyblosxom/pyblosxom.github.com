@@ -11,9 +11,45 @@
    <language>en</language>
    <copyright></copyright>
    <ttl>60</ttl>
-   <pubDate>Wed, 27 Jun 2012 21:03 GMT</pubDate>
+   <pubDate>Tue, 18 Jun 2013 14:03 GMT</pubDate>
    <managingEditor>pyblosxom-users@lists.sourceforge.net</managingEditor>
    <generator>PyBlosxom http://pyblosxom.github.com/ 1.5.2</generator>
+<item>
+   <title>More updates</title>
+   <guid isPermaLink="false">news/2013-06-18</guid>
+   <link>/news/2013-06-18.</link>
+   <description><![CDATA[
+<p>
+It's been almost a full year since my last news update. Hi!</p>
+<p>It's been a pretty tumultuous year both for me and PyBlosxom. </p>
+
+<p>I've spent a lot of this time getting used to the codebase,
+which was frankly somewhat intimidating to someone new to the project,
+which I was when I first joined a year ago.</p>
+
+<p> On the Pyblosxom front,Although we haven't had a super-large amount of updates, 
+We did get some bugs squashed and began a new repo for external plugins,
+which I hope will eventually lead to plugins being more updated and accessable</p>
+
+<p>Markus Koschany (https://launchpad.net/~apoleon) has been working on 
+the Debian repo to finally get our package there updated for the next release. (Thank you!)</p>
+
+<p>We made the move over to GitHub will all our stuff and the documentation has been updated to reflect it</p>
+
+<p>I'm happy to note it looks like we got a few new installs and a few new faces appeared on IRC</p>
+
+<p>I hope this year brings a lot more to the table for PyBlosxom and my door is 
+always open for comments, criticism, cuggestions or help :-)</p>
+
+<p>
+  -Akai
+</p>
+
+
+]]></description>
+   <category domain=""></category>
+   <pubDate>Tue, 18 Jun 2013 14:03 GMT</pubDate>
+</item>
 <item>
    <title>Handover and update</title>
    <guid isPermaLink="false">news/2012-06-27</guid>
@@ -35,7 +71,7 @@
 
 ]]></description>
    <category domain=""></category>
-   <pubDate>Wed, 27 Jun 2012 21:03 GMT</pubDate>
+   <pubDate>Wed, 27 Jun 2012 14:03 GMT</pubDate>
 </item>
 <item>
    <title>Pyblosxom 1.5.2 released!</title>
@@ -67,7 +103,7 @@ pyblosxom-users mailing list.  Details are on <a class="reference external" href
 
 ]]></description>
    <category domain=""></category>
-   <pubDate>Sat, 31 Dec 2011 01:15 GMT</pubDate>
+   <pubDate>Fri, 30 Dec 2011 18:15 GMT</pubDate>
 </item>
 <item>
    <title>Pyblosxom 1.5.1 released!</title>
@@ -101,7 +137,7 @@ pyblosxom-users mailing list.  Details are on <a class="reference external" href
 
 ]]></description>
    <category domain=""></category>
-   <pubDate>Fri, 30 Dec 2011 00:22 GMT</pubDate>
+   <pubDate>Thu, 29 Dec 2011 17:22 GMT</pubDate>
 </item>
 <item>
    <title>Pyblosxom 1.5 final released</title>
@@ -165,7 +201,7 @@ pyblosxom-users mailing list.  Details are on <a class="reference external" href
 
 ]]></description>
    <category domain=""></category>
-   <pubDate>Thu, 29 Dec 2011 01:24 GMT</pubDate>
+   <pubDate>Wed, 28 Dec 2011 18:24 GMT</pubDate>
 </item>
 <item>
    <title>Status December 12th, 2011</title>
@@ -186,7 +222,7 @@ week.</p>
 
 ]]></description>
    <category domain=""></category>
-   <pubDate>Mon, 12 Dec 2011 18:38 GMT</pubDate>
+   <pubDate>Mon, 12 Dec 2011 11:38 GMT</pubDate>
 </item>
 <item>
    <title>PyBlosxom 1.5rc3 released</title>
@@ -217,7 +253,7 @@ week.</p>
 
 ]]></description>
    <category domain=""></category>
-   <pubDate>Sun, 19 Jun 2011 03:06 GMT</pubDate>
+   <pubDate>Sat, 18 Jun 2011 20:06 GMT</pubDate>
 </item>
 <item>
    <title>Status March 19th, 2011</title>
@@ -259,7 +295,7 @@ week.</p>
 
 ]]></description>
    <category domain=""></category>
-   <pubDate>Sat, 19 Mar 2011 21:03 GMT</pubDate>
+   <pubDate>Sat, 19 Mar 2011 15:03 GMT</pubDate>
 </item>
 <item>
    <title>Status January 8th, 2011</title>
@@ -313,7 +349,7 @@ week.</p>
 
 ]]></description>
    <category domain=""></category>
-   <pubDate>Sat, 08 Jan 2011 17:35 GMT</pubDate>
+   <pubDate>Sat, 08 Jan 2011 10:35 GMT</pubDate>
 </item>
 <item>
    <title>PyBlosxom 1.5rc2 released</title>
@@ -345,45 +381,7 @@ week.</p>
 
 ]]></description>
    <category domain=""></category>
-   <pubDate>Tue, 03 Aug 2010 14:00 GMT</pubDate>
-</item>
-<item>
-   <title>New site, new conventions, almost new version</title>
-   <guid isPermaLink="false">news/2010-04-17</guid>
-   <link>/news/2010-04-17.</link>
-   <description><![CDATA[
-<p>
-  We're moving from SourceForge to Bluesock.  Bluesock is my own personal
-  server where I'll have a lot more control over the site in terms of how
-  it's built.  On SourceForge we're severely limited to static pages or
-  the various applications that they install.  It's been a real pain in
-  the ass.
-</p>
-<p>
-  Additionally, I've gone through the site and updated it to reflect our
-  move from svn to git.
-</p>
-<p>
-  On top of that, we're ditching the SourceForge bug tracker.  We don't
-  have a bug tracker set up, though, so we're just going to wing it with
-  the pyblosxom-devel mailing list.  If it becomes necessary, we'll set
-  up a new bug tracker.
-</p>
-<p>
-  PyBlosxom 1.5 is almost done.  A handful of things have been done since
-  the release candidate a while back.  The documentation still needs another
-  going over and parts of it need to be updated.
-</p>
-<p>
-  Hopefully all that will happen soon.
-</p>
-<p>
-  /will
-</p>
-
-]]></description>
-   <category domain=""></category>
-   <pubDate>Sat, 17 Apr 2010 21:50 GMT</pubDate>
+   <pubDate>Tue, 03 Aug 2010 07:00 GMT</pubDate>
 </item>
 </channel>
 </rss>
