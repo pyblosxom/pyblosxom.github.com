@@ -11,9 +11,28 @@
    <language>en</language>
    <copyright></copyright>
    <ttl>60</ttl>
-   <pubDate>Tue, 18 Jun 2013 14:03 GMT</pubDate>
+   <pubDate>Wed, 26 Jun 2013 01:25 GMT</pubDate>
    <managingEditor>pyblosxom-users@lists.sourceforge.net</managingEditor>
    <generator>PyBlosxom http://pyblosxom.github.com/ 1.5.2</generator>
+<item>
+   <title>Theme Repo</title>
+   <guid isPermaLink="false">news/2013-06-26</guid>
+   <link>/news/2013-06-26.</link>
+   <description><![CDATA[
+<p>
+We now have a shiny new repo for themes - I've uploaded an updated version of MainlyGreen
+to get started with, which has been updated for the latest PyBlosxom 
+and optimized for pagnate and the comments plugin</p>
+
+<p>
+  -Akai
+</p>
+
+
+]]></description>
+   <category domain=""></category>
+   <pubDate>Wed, 26 Jun 2013 01:25 GMT</pubDate>
+</item>
 <item>
    <title>More updates</title>
    <guid isPermaLink="false">news/2013-06-18</guid>
@@ -72,157 +91,6 @@ always open for comments, criticism, suggestions or help :-)</p>
 ]]></description>
    <category domain=""></category>
    <pubDate>Wed, 27 Jun 2012 14:03 GMT</pubDate>
-</item>
-<item>
-   <title>Pyblosxom 1.5.2 released!</title>
-   <guid isPermaLink="false">news/pyblosxom-1.5.2</guid>
-   <link>/news/pyblosxom-1.5.2.</link>
-   <description><![CDATA[
-<p>This fixes two issues:</p>
-<ol class="arabic simple">
-<li>removed debug logging from pycategories</li>
-<li>fixed a warning when doing <tt class="docutils literal">pip install pyblosxom</tt></li>
-</ol>
-<div class="section" id="where-to-get-it">
-<h3>Where to get it</h3>
-<p>We're pushing PyPI now.  To install Pyblosxom:</p>
-<pre class="literal-block">
-pip install pyblosxom
-</pre>
-<p>To upgrade:</p>
-<pre class="literal-block">
-pip install --upgrade pyblosxom
-</pre>
-<p>For tarballs, source code, and other things, see the website.</p>
-</div>
-<div class="section" id="how-to-get-help">
-<h3>How to get help</h3>
-<p>If you have any problems, say hi on IRC or send an email to the
-pyblosxom-users mailing list.  Details are on <a class="reference external" href="http://pyblosxom.github.com/">the website</a>.</p>
-</div>
-
-]]></description>
-   <category domain=""></category>
-   <pubDate>Fri, 30 Dec 2011 18:15 GMT</pubDate>
-</item>
-<item>
-   <title>Pyblosxom 1.5.1 released!</title>
-   <guid isPermaLink="false">news/pyblosxom-1.5.1</guid>
-   <link>/news/pyblosxom-1.5.1.</link>
-   <description><![CDATA[
-<p>This fixes two issues:</p>
-<ol class="arabic simple">
-<li>manifest was missing README.rst which hosed <tt class="docutils literal">python setup.py install</tt></li>
-<li>the WHATSNEW page had the wrong version and date for the 1.5 release</li>
-</ol>
-<p>The first is bad and worth putting out a new release.  Sorry about
-that.  Many thanks to ntoll who popped on IRC and let us know.</p>
-<div class="section" id="where-to-get-it">
-<h3>Where to get it</h3>
-<p>We're pushing PyPI now.  To install Pyblosxom:</p>
-<pre class="literal-block">
-pip install pyblosxom
-</pre>
-<p>To upgrade:</p>
-<pre class="literal-block">
-pip install --upgrade pyblosxom
-</pre>
-<p>For tarballs, source code, and other things, see the website.</p>
-</div>
-<div class="section" id="how-to-get-help">
-<h3>How to get help</h3>
-<p>If you have any problems, say hi on IRC or send an email to the
-pyblosxom-users mailing list.  Details are on <a class="reference external" href="http://pyblosxom.github.com/">the website</a>.</p>
-</div>
-
-]]></description>
-   <category domain=""></category>
-   <pubDate>Thu, 29 Dec 2011 17:22 GMT</pubDate>
-</item>
-<item>
-   <title>Pyblosxom 1.5 final released</title>
-   <guid isPermaLink="false">news/pyblosxom-1.5</guid>
-   <link>/news/pyblosxom-1.5.</link>
-   <description><![CDATA[
-<div class="section" id="release">
-<h3>Release!</h3>
-<p>It's been a long road for Pyblosxom 1.5.  The first time I said that
-PyBlosxom 1.5 was pretty much done was in June of 2009.  That turned
-out to be hilariously wrong and development continued for another two
-and a half years.</p>
-<p>In that period of time, we switched from svn to git and put the
-project on Gitorious, we switched bug trackers, we had like 350
-commits, we added tests, we started using a wiki, we abandoned the
-wiki, we renamed the project, we overhauled the documentation a few
-times, we added plugins, we removed plugins, we did the hokey-pokey
-and moved the rest of them around a few times, we moved the project to
-GitHub, we started using IRC more heavily, we had three release
-candidates, and a bunch of other things.</p>
-<p>Was Pyblosxom 1.5 worth it?  Definitely---it's a magnificent
-improvement over 1.4.3.  I highly recommend upgrading.</p>
-<p>For complete details of what's new in 1.5, read the <a class="reference external" href="http://pyblosxom.github.com/1.5/whatsnew.html">WHATSNEW section
-of the manual</a>.
-Here are some highlights:</p>
-<ol class="arabic simple">
-<li>We changed the name of the project to Pyblosxom.  Down with camel case.</li>
-<li>Plugins are now part of the package.  When you upgrade Pyblosxom in
-the future, core plugins will automatically get upgraded, too.
-Plugin documentation is now part of the manual.  There are some new
-plugins, some rewritten plugins, and a bunch of plugins have seen
-significant improvements.</li>
-<li>pyblosxom-cmd is vastly improved.  Creating a new blog is much
-easier than in previous versions.</li>
-<li>Better crash handling.  Pyblosxom now has a crash page that makes
-it easier to figure out why it's crashing and either fix it or tell
-someone the information they need to know to fix it.</li>
-<li>Improved documentation.</li>
-<li>Vastly cleaner code, more tests, and better project infrastructure.</li>
-<li>More options for static rendering.</li>
-</ol>
-<p>Yay for Pyblosxom 1.5!</p>
-</div>
-<div class="section" id="where-to-get-it">
-<h3>Where to get it</h3>
-<p>We're pushing PyPI now.  To install Pyblosxom:</p>
-<pre class="literal-block">
-pip install pyblosxom
-</pre>
-<p>To upgrade:</p>
-<pre class="literal-block">
-pip install --upgrade pyblosxom
-</pre>
-<p>For tarballs, source code, and other things, see the website.</p>
-</div>
-<div class="section" id="how-to-get-help">
-<h3>How to get help</h3>
-<p>If you have any problems, say hi on IRC or send an email to the
-pyblosxom-users mailing list.  Details are on <a class="reference external" href="http://pyblosxom.github.com/">the website</a>.</p>
-</div>
-
-]]></description>
-   <category domain=""></category>
-   <pubDate>Wed, 28 Dec 2011 18:24 GMT</pubDate>
-</item>
-<item>
-   <title>Status December 12th, 2011</title>
-   <guid isPermaLink="false">news/2011-12-12</guid>
-   <link>/news/2011-12-12.</link>
-   <description><![CDATA[
-<p>It's been a while since the last status update and a lot has happened
-since then:</p>
-<ul class="simple">
-<li>renamed the project from PyBlosxom to Pyblosxom</li>
-<li>folded core plugins into the Pyblosxom core</li>
-<li>moved the pyblosxom repository from gitorious to github</li>
-<li>added new plugins, bug fixes, more tests, fixed documentation, ...</li>
-</ul>
-<p>We're pretty close to a 1.5 final release.  This release has been a long time
-coming and it'll be good to get it out.  I'm hoping it'll happen in the next
-week.</p>
-
-]]></description>
-   <category domain=""></category>
-   <pubDate>Mon, 12 Dec 2011 11:38 GMT</pubDate>
 </item>
 <item>
    <title>PyBlosxom 1.5rc3 released</title>
@@ -382,6 +250,138 @@ week.</p>
 ]]></description>
    <category domain=""></category>
    <pubDate>Tue, 03 Aug 2010 07:00 GMT</pubDate>
+</item>
+<item>
+   <title>New site, new conventions, almost new version</title>
+   <guid isPermaLink="false">news/2010-04-17</guid>
+   <link>/news/2010-04-17.</link>
+   <description><![CDATA[
+<p>
+  We're moving from SourceForge to Bluesock.  Bluesock is my own personal
+  server where I'll have a lot more control over the site in terms of how
+  it's built.  On SourceForge we're severely limited to static pages or
+  the various applications that they install.  It's been a real pain in
+  the ass.
+</p>
+<p>
+  Additionally, I've gone through the site and updated it to reflect our
+  move from svn to git.
+</p>
+<p>
+  On top of that, we're ditching the SourceForge bug tracker.  We don't
+  have a bug tracker set up, though, so we're just going to wing it with
+  the pyblosxom-devel mailing list.  If it becomes necessary, we'll set
+  up a new bug tracker.
+</p>
+<p>
+  PyBlosxom 1.5 is almost done.  A handful of things have been done since
+  the release candidate a while back.  The documentation still needs another
+  going over and parts of it need to be updated.
+</p>
+<p>
+  Hopefully all that will happen soon.
+</p>
+<p>
+  /will
+</p>
+
+]]></description>
+   <category domain=""></category>
+   <pubDate>Sat, 17 Apr 2010 14:50 GMT</pubDate>
+</item>
+<item>
+   <title>Status April 4th, 2010</title>
+   <guid isPermaLink="false">news/2010-04-04</guid>
+   <link>/news/2010-04-04.</link>
+   <description><![CDATA[
+<p>
+  There have been lots of changes in the last few months.  We're
+  finishing up PyBlosxom 1.5 and we're moving the project to different
+  infrastructure.  Let me cover these one at a time.
+</p>
+<p>
+  We did a PyBlosxom 1.5 rc1 release a couple of months ago.  Since
+  then, we've been hanging out on <code>#pyblosxom</code> on Freenode
+  and fielding questions.  I think it's going really well for
+  everyone.  As people bring up issues, we're fixing them or putting
+  them on the TODO list to get fixed.  Most of the problems revolve
+  around plugin support or plugin bugs.
+</p>
+<p>
+  We've been working on updating plugins in the contributed plugins
+  pack.  We're also getting rid of the contributed plugins pack and
+  going back to what we used to do several versions ago where we ship
+  plugins with the PyBlosxom tarball.  Plugins that are used by many
+  users and are well supported will be located in
+  the <code>plugins/</code> directory of the tarball.  We have a unit
+  test system set up and we're adding tests for these plugins.  We'll
+  be making an effort going forward to update plugins as we update
+  PyBlosxom core and everything should be shiny happy.
+</p>
+<p>
+  We're planning to rework the plugin registry on the site to provide
+  an index of all the plugins out there--both those in the tarball and
+  those maintained by other people.  Work on this hasn't started,
+  yet.  I think this is a post PyBlosxom 1.5 project.
+</p>
+<p>
+  There are a handful of plugins that I want to update, add tests for,
+  and move to the <code>plugins/</code> directory to ship with the
+  tarball.  Once that happens, we'll release a 1.5 final.
+</p>
+<p>
+  In regards to the infrastructure, we're switching to git.  Sebastian
+  very kindly converted our svn repository into three git repositories
+  that are now at
+  <a href="http://gitorious.org/pyblosxom/">http://gitorious.org/pyblosxom/</a>.
+  This will make development a lot easier going forward.
+</p>
+<p>
+  We're also scheming to rework the website so it's a better project
+  website, has a better registry for plugins and flavours, and makes
+  it easier for us to collaborate on PyBlosxom development.
+</p>
+<p>
+  That's where we're at.  If you want to contribute and/or hang out,
+  we're on <code>#pyblosxom</code> on Freenode and the PyBlosxom
+  develop mailing list.
+</p>
+<p>
+  /will (willg at bluesock dot org)
+</p>
+
+]]></description>
+   <category domain=""></category>
+   <pubDate>Sun, 04 Apr 2010 08:47 GMT</pubDate>
+</item>
+<item>
+   <title>PyBlosxom 1.5-rc1 released</title>
+   <guid isPermaLink="false">news/pyblosxom.1.5-rc1</guid>
+   <link>/news/pyblosxom.1.5-rc1.</link>
+   <description><![CDATA[
+<p>
+  It's been two years since the last release.  Since then the world has turned,
+  tools have improved (thank you Sphinx!), and PyBlosxom has undergone a lot
+  of changes.  The list of changes is really long.  As such, this is a release
+  candidate to get some more testing.
+</p>
+<p>
+  Download here:
+</p>
+<p>
+  <a href="https://sourceforge.net/projects/pyblosxom/files/">https://sourceforge.net/projects/pyblosxom/files/</a>
+</p>
+<p>
+  If you have any problems, please toss a bug in the bug tracker, say hi on IRC (<code>#pyblosxom</code>
+  on <code>irc.freenode.net</code>), or send an email to the pyblosxom-users mailing list.
+</p>
+<p>
+/will (willhelm at users dot sourceforge dot net)
+</p>
+
+]]></description>
+   <category domain=""></category>
+   <pubDate>Fri, 29 Jan 2010 14:18 GMT</pubDate>
 </item>
 </channel>
 </rss>
