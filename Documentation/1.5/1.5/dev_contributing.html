@@ -1,0 +1,186 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Contributing &mdash; PyBlosxom 1.5.2 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.5.2',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="PyBlosxom 1.5.2 documentation" href="index.html" />
+    <link rel="next" title="Hacking on PyBlosxom" href="dev_hacking.html" />
+    <link rel="prev" title="yeararchives - Builds year-based archives listing...." href="plugins/yeararchives.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="dev_hacking.html" title="Hacking on PyBlosxom"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="plugins/yeararchives.html" title="yeararchives - Builds year-based archives listing...."
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">PyBlosxom 1.5.2 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="contributing">
+<span id="dev-contributing"></span><h1>Contributing<a class="headerlink" href="#contributing" title="Permalink to this headline">¶</a></h1>
+<p>This covers the basics you need to know for contributing to
+PyBlosxom.</p>
+<div class="section" id="how-to-clone-the-project">
+<h2>How to clone the project<a class="headerlink" href="#how-to-clone-the-project" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://github.com/pyblosxom/pyblosxom">PyBlosxom is on GitHub</a>.</p>
+<div class="section" id="if-you-have-a-github-account-recommended">
+<h3>If you have a GitHub account [Recommended]<a class="headerlink" href="#if-you-have-a-github-account-recommended" title="Permalink to this headline">¶</a></h3>
+<p>This is the ideal way to contribute because GitHub makes things simple
+and convenient .</p>
+<p>Go to the project page (<a class="reference external" href="https://github.com/pyblosxom/pyblosxom">https://github.com/pyblosxom/pyblosxom</a>) and click on
+&#8220;Fork&#8221; at the top right on the screen. GitHub will create a copy of the
+PyBlosxom repository in your account for you to work on.</p>
+<p>Create a new branch off of master for any new work that you do.</p>
+<p>When you want to send it upstream, create a pull request.</p>
+<p>If you need help with this process, <a class="reference external" href="http://help.github.com/">see the GitHub documentation</a>.</p>
+</div>
+<div class="section" id="if-you-don-t-have-a-github-account">
+<h3>If you don&#8217;t have a GitHub account<a class="headerlink" href="#if-you-don-t-have-a-github-account" title="Permalink to this headline">¶</a></h3>
+<p>Clone the project using git:</p>
+<div class="highlight-python"><pre>git clone https://github.com/pyblosxom/pyblosxom.git</pre>
+</div>
+<p>Set <tt class="docutils literal"><span class="pre">user.name</span></tt> and <tt class="docutils literal"><span class="pre">user.email</span></tt> git configuration:</p>
+<div class="highlight-python"><pre>git config user.name "your name"
+git config user.email "your@email.address"</pre>
+</div>
+<p>Create a new branch off of master for any new work that you do.</p>
+<p>When you want to send it upstream, do:</p>
+<div class="highlight-python"><pre>git format-patch --stdout origin/master &gt; NAME_OF_PATCH_FILE.patch</pre>
+</div>
+<p>where <tt class="docutils literal"><span class="pre">NAME_OF_PATCH_FILE</span></tt> is a nice name that&#8217;s short and
+descriptive of what the patch holds and master should be replaced with your
+branch name</p>
+<p>Then attach that <tt class="docutils literal"><span class="pre">.patch</span></tt> file and send it to pyblosxom-devel
+mailing list.</p>
+</div>
+</div>
+<div class="section" id="code-conventions">
+<h2>Code conventions<a class="headerlink" href="#code-conventions" title="Permalink to this headline">¶</a></h2>
+<p>Follow <a class="reference external" href="http://www.python.org/dev/peps/pep-0008/">PEP-8</a>.</p>
+</div>
+<div class="section" id="tests">
+<h2>Tests<a class="headerlink" href="#tests" title="Permalink to this headline">¶</a></h2>
+<p>Please add tests for changes you make. In general, it&#8217;s best to write
+a test, verify that it fails, then fix the code which should make the
+test pass.</p>
+<p>Tests go in <tt class="docutils literal"><span class="pre">Pyblosxom/tests/</span></tt>.</p>
+</div>
+<div class="section" id="documentation">
+<h2>Documentation<a class="headerlink" href="#documentation" title="Permalink to this headline">¶</a></h2>
+<p>New features should come with appropriate changes to the documentation.</p>
+<p>Documentation is in the <tt class="docutils literal"><span class="pre">docs/</span></tt> directory, written using
+<a class="reference external" href="http://docutils.sourceforge.net/rst.html">restructured text</a>, and
+built with <a class="reference external" href="http://sphinx.pocoo.org/">Sphinx</a>.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Contributing</a><ul>
+<li><a class="reference internal" href="#how-to-clone-the-project">How to clone the project</a><ul>
+<li><a class="reference internal" href="#if-you-have-a-github-account-recommended">If you have a GitHub account [Recommended]</a></li>
+<li><a class="reference internal" href="#if-you-don-t-have-a-github-account">If you don&#8217;t have a GitHub account</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#code-conventions">Code conventions</a></li>
+<li><a class="reference internal" href="#tests">Tests</a></li>
+<li><a class="reference internal" href="#documentation">Documentation</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="plugins/yeararchives.html"
+                        title="previous chapter">yeararchives - Builds year-based archives listing....</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="dev_hacking.html"
+                        title="next chapter">Hacking on PyBlosxom</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/dev_contributing.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="dev_hacking.html" title="Hacking on PyBlosxom"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="plugins/yeararchives.html" title="yeararchives - Builds year-based archives listing...."
+             >previous</a> |</li>
+        <li><a href="index.html">PyBlosxom 1.5.2 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright Creative Commons CC0 - http://creativecommons.org/publicdomain/zero/1.0/.
+      Last updated on Jun 18, 2013.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2b1.
+    </div>
+  </body>
+</html>

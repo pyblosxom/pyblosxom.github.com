@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+
+    <title>PyBlosxom - THE Python-Based Flatfile Blog Engine</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap3/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="bootstrap3/css/justified-nav.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="bootstrap3/js/html5shiv.js"></script>
+      <script src="bootstrap3/js/respond.min.js"></script>
+    <![endif]-->
+    <style type="text/css">
+	.pyb_lists li{
+		padding-bottom: 4px;
+	}
+	#bigspacer{
+		padding-bottom: 30px;
+		padding-top: 30px;
+	}
+
+	.mainlogo {
+		margin-top: 4em;
+	}
+	
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+.tint {	
+	background-color: rgb(245, 245, 245);
+}
+
+	.spaced {
+		margin-right: 6px;
+		margin-left: 6px;
+	}
+	</style>
+  </head>
+
+  <body>
+
+    <div class="container">
+
+
+ <div class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="http://pyblosxom.github.io">PyBlosxom</a>
+          </div>
+          <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+              <li><a href="http://pyblosxom.github.io">Home</a></li>
+              <li><a href="About.html">About</a></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Download <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                
+				  <li class="dropdown-header">Releases</li>
+                  <li><a href="Downloads/latest.tar.gz">Latest Release</a></li>
+                  <li><a href="Downloads/index.html">Legacy Releases</a></li>     
+                               
+                  <li class="divider"></li>
+                  <li class="dropdown-header">Plugins/Themes</li>
+                  <li><a href="Plugins.html">Get Plugins</a></li>
+                  <li><a href="Flavours.html">Get Themes/Flavours</a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Documentation <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                
+				  <li class="dropdown-header">Current Docs (1.5)</li>
+                  <li><a href="Documentation/1.5/install.html">QuickStart</a></li>
+                  <li><a href="Documentation/1.5/index.html">Full Documentation</a></li>     
+                               
+                  <li class="divider"></li>
+                  <li class="dropdown-header">Legacy Documentation</li>
+                  <li><a href="Documentation/1.4/manual/index.html">PyBlosxom 1.4</a></li>
+                  <li><a href="Documentation/1.4/api/index.html">PyBlosxom 1.4 API</a></li>
+                  <li><a href="Documentation/1.3.1/manual/index.html">PyBlosxom 1.3</a></li>
+                  <li><a href="Documentation/1.3.1/api/index.html">PyBlosxom 1.3 API</a></li>
+                </ul>
+              </li>
+              <li><a href="Community.html">Community</a></li>
+              <li><a href="https://github.com/pyblosxom/">Github</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+
+
+     
+
+
+      <!-- Jumbotron -->
+      <div class="mainlogo">
+       <img src="Images/mainlogo.png">
+      </div>
+      
+      
+
+      
+      
+      
+      <h1>Pyblosxom Plugin Registry</h1>
+<p>
+  Welcome to the Pyblosxom registry.
+</p>
+
+
+
+<h2>archives</h2>
+<div id="body">
+<ul>
+   <li><b><a href="/registry/archives/indexfile.html">index</a></b> :  Shows index of all entries, sorted and displayed alphabetically by filename.
+   <li><b><a href="/registry/archives/pyarchives.html">pyarchives</a></b> : <span class="registry-tag">1.4</span> <span class="registry-tag">1.5</span> <span class="registry-tag">core</span> Builds month/year-based archives listing.
+   <li><b><a href="/registry/archives/pyblosxomignore.html">pyblosxom-ignore</a></b> :  Allows you to do drafts.
+   <li><b><a href="/registry/archives/yeararchives.html">yeararchives</a></b> : <span class="registry-tag">1.4</span> <span class="registry-tag">1.5</span> <span class="registry-tag">core</span> Builds year-based archives listing.
+
+</ul>
+</div>
+<h2>browser</h2>
+<div id="body">
+<ul>
+   <li><b><a href="/registry/browser/geckonotice.html">gecko_notice</a></b> :  gecko_notice
+
+</ul>
+</div>
+<h2>category</h2>
+<div id="body">
+<ul>
+   <li><b><a href="/registry/category/pycategories.html">pycategories</a></b> : <span class="registry-tag">1.4</span> <span class="registry-tag">1.5</span> <span class="registry-tag">core</span> Builds a list of categories.
+   <li><b><a href="/registry/category/story-category.html">story-category</a></b> :  story-category
+
+</ul>
+</div>
+<h2>comments</h2>
+<div id="body">
+<ul>
+   <li><b><a href="/registry/comments/akismetcomments.html">akismetcomments</a></b> : <span class="registry-tag">1.4</span> <span class="registry-tag">1.5</span> <span class="registry-tag">core</span> Rejects comments using akismet
+   <li><b><a href="/registry/comments/check_blacklist.html">check_blacklist</a></b> : <span class="registry-tag">1.4</span> <span class="registry-tag">1.5</span> <span class="registry-tag">core</span> Rejects comments using a word blacklist.
+   <li><b><a href="/registry/comments/check_javascript.html">check_javascript</a></b> : <span class="registry-tag">1.4</span> <span class="registry-tag">1.5</span> <span class="registry-tag">core</span> Rejects comments using JavaScript
+   <li><b><a href="/registry/comments/check_nonhuman.html">check_nonhuman</a></b> : <span class="registry-tag">1.4</span> <span class="registry-tag">1.5</span> <span class="registry-tag">core</span> Rejects non-human comments.
+   <li><b><a href="/registry/comments/comment_openid.html">comment-openid</a></b> :  comment-openid
+   <li><b><a href="/registry/comments/commentAPI.html">commentAPI</a></b> : <span class="registry-tag">1.4</span> <span class="registry-tag">core</span> CommentAPI provides support for Joe Gregario's CommentAPI.
+   <li><b><a href="/registry/comments/comments.html">comments</a></b> : <span class="registry-tag">1.4</span> <span class="registry-tag">1.5</span> <span class="registry-tag">core</span> Adds comments to a blog entry.
+   <li><b><a href="/registry/comments/disqus.html">disqus</a></b> : <span class="registry-tag">1.5</span> <span class="registry-tag">core</span> Lets me use Disqus for comments.
+   <li><b><a href="/registry/comments/magicword.html">magicword</a></b> : <span class="registry-tag">1.4</span> <span class="registry-tag">1.5</span> <span class="registry-tag">core</span> Magic word method for reducing comment spam
+   <li><b><a href="/registry/comments/no_old_comments.html">no_old_comments</a></b> : <span class="registry-tag">1.4</span> <span class="registry-tag">1.5</span> <span class="registry-tag">core</span> Prevent comments on entries older than a month.
+   <li><b><a href="/registry/comments/comment_nospam.html">nospam</a></b> :  nospam
+   <li><b><a href="/registry/comments/spamquestion.html">spamquestion</a></b> :  spamquestion
+   <li><b><a href="/registry/comments/trackback.html">trackback</a></b> : <span class="registry-tag">1.4</span> <span class="registry-tag">core</span> Trackback support.
+   <li><b><a href="/registry/comments/xmlrpc_pingback.html">xmlrpc_pingback</a></b> : <span class="registry-tag">1.4</span> <span class="registry-tag">core</span> XMLRPC pingback support.
+
+</ul>
+</div>
+<h2>content</h2>
+<div id="body">
+<ul>
+   <li><b><a href="/registry/content/pages.html">pages</a></b> : <span class="registry-tag">1.4</span> <span class="registry-tag">1.5</span> <span class="registry-tag">core</span> Allows you to include non-blog-entry files in your site and have a non-blog-entry front page.
+
+</ul>
+</div>
+<h2>date</h2>
+<div id="body">
+<ul>
+   <li><b><a href="/registry/date/HardCodeDates.html">HardCodeDates</a></b> :  HardCodeDates
+   <li><b><a href="/registry/date/entrycache.html">entrycache</a></b> :  entrycache
+   <li><b><a href="/registry/date/firstdaydiv.html">firstdaydiv</a></b> : <span class="registry-tag">1.4</span> <span class="registry-tag">1.5</span> <span class="registry-tag">core</span> Adds a token which tells us whether we're the first day being displayed or not.
+   <li><b><a href="/registry/date/fixfiletime.html">fixfiletime</a></b> :  fixfiletime
+   <li><b><a href="/registry/date/pycalendar.html">pycalendar</a></b> : <span class="registry-tag">1.4</span> <span class="registry-tag">1.5</span> <span class="registry-tag">core</span> Displays a calendar on your blog.
+   <li><b><a href="/registry/date/pyfilenamemtime.html">pyfilenamemtime</a></b> : <span class="registry-tag">1.4</span> <span class="registry-tag">1.5</span> <span class="registry-tag">core</span> Allows you to codify the mtime in the filename.
+   <li><b><a href="/registry/date/rememberdates.html">rememberdates</a></b> :  rememberdates
+   <li><b><a href="/registry/date/w3cdate.html">w3cdate</a></b> : <span class="registry-tag">1.4</span> <span class="registry-tag">1.5</span> <span class="registry-tag">core</span> Adds a 'w3cdate' variable which is the mtime in ISO8601 format.
+
+</ul>
+</div>
+<h2>display/graphics</h2>
+<div id="body">
+<ul>
+   <li><b><a href="/registry/display/graphics/photogallery.html">Photogallery</a></b> :  Photogallery
+   <li><b><a href="/registry/display/graphics/pygallery.html">pygallery</a></b> :  pygallery
+
+</ul>
+</div>
+<h2>display</h2>
+<div id="body">
+<ul>
+   <li><b><a href="/registry/display/booklist.html">book list</a></b> :  book list
+   <li><b><a href="/registry/display/bookreview.html">book review</a></b> :  book review
+   <li><b><a href="/registry/display/eg_pager.html">eg_pager</a></b> :  eg_pager
+   <li><b><a href="/registry/display/eg_random.html">eg_random</a></b> :  eg_random
+   <li><b><a href="/registry/display/eg_recent_posts.html">eg_recent_posts</a></b> :  eg_recent_posts
+   <li><b><a href="/registry/display/entrytitle.html">entrytitle</a></b> : <span class="registry-tag">1.4</span> <span class="registry-tag">1.5</span> <span class="registry-tag">core</span> Puts entry title in page title.
+   <li><b><a href="/registry/display/flavourswap.html">flavourswap</a></b> :  flavourswap
+   <li><b><a href="/registry/display/pagetitle.html">pagetitle</a></b> :  pagetitle
+   <li><b><a href="/registry/display/paginate.html">paginate</a></b> : <span class="registry-tag">1.5</span> <span class="registry-tag">core</span> Allows navigation by page for indexes that have too many entries.
+   <li><b><a href="/registry/display/pyentrynavi.html">pyentrynavi</a></b> :  pyentrynavi
+   <li><b><a href="/registry/display/pyfilenamemtime.html">pyfilenamemtime</a></b> : <span class="registry-tag">1.4</span> <span class="registry-tag">1.5</span> <span class="registry-tag">core</span> Allows you to codify the mtime in the filename.
+   <li><b><a href="/registry/display/pyrecentposts.html">pyrecent posts</a></b> :  pyrecent posts
+   <li><b><a href="/registry/display/readmore.html">readmore</a></b> : <span class="registry-tag">1.5</span> <span class="registry-tag">core</span> Breaks blog entries into summary and details
+   <li><b><a href="/registry/display/selectiveads.html">selective ads</a></b> :  selective ads
+   <li><b><a href="/registry/display/stripes.html">stripes</a></b> :  stripes
+   <li><b><a href="/registry/display/viewcount.html">viewcount</a></b> :  viewcount
+   <li><b><a href="/registry/display/wordcount.html">wordcount</a></b> :  wordcount
+
+</ul>
+</div>
+<h2>edit</h2>
+<div id="body">
+<ul>
+   <li><b><a href="/registry/edit/editfile.html">editfile</a></b> :  editfile
+
+</ul>
+</div>
+<h2>files</h2>
+<div id="body">
+<ul>
+   <li><b><a href="/registry/files/history.html">History</a></b> :  History
+   <li><b><a href="/registry/files/filekicker.html">filekicker</a></b> :  filekicker
+   <li><b><a href="/registry/files/flavourfiles.html">flavourfiles</a></b> : <span class="registry-tag">1.5</span> <span class="registry-tag">core</span> <span class="registry-tag">experimental</span> Serves static files related to flavours (css, js, ...)
+   <li><b><a href="/registry/files/pyblosxomsvn.html">pyblosxom-svn</a></b> :  pyblosxom-svn
+   <li><b><a href="/registry/files/svnfilestat.html">svnfilestat</a></b> :  svnfilestat
+
+</ul>
+</div>
+<h2>filtering</h2>
+<div id="body">
+<ul>
+   <li><b><a href="/registry/filtering/filter.html">filter</a></b> :  filter
+
+</ul>
+</div>
+<h2>flavours</h2>
+<div id="body">
+<ul>
+   <li><b><a href="/registry/flavours/1024px.html">1024px</a></b> :  1024px
+   <li><b><a href="/registry/flavours/wbg1.html">Blue and blue</a></b> :  Blue and blue
+   <li><b><a href="/registry/flavours/Gray.html">Gray</a></b> :  Gray
+   <li><b><a href="/registry/flavours/MainlyGreen.html">Mainly Green (version 2)</a></b> :  Mainly Green (version 2)
+   <li><b><a href="/registry/flavours/rdf.html">RDF</a></b> :  RDF
+   <li><b><a href="/registry/flavours/snarfed.html">snarfed.org</a></b> :  snarfed.org
+
+</ul>
+</div>
+<h2>general</h2>
+<div id="body">
+<ul>
+   <li><b><a href="/registry/general/404_handler.html">404_handler</a></b> :  404_handler
+   <li><b><a href="/registry/general/autoping.html">autoping</a></b> :  autoping
+   <li><b><a href="/registry/general/compatibility.html">compatibility</a></b> :  compatibility
+   <li><b><a href="/registry/general/plugininfo.html">plugininfo</a></b> :  plugininfo
+   <li><b><a href="/registry/general/session.html">session</a></b> :  session
+   <li><b><a href="/registry/general/wbglastsummary.html">wbglast10summary</a></b> :  wbglast10summary
+
+</ul>
+</div>
+<h2>headers</h2>
+<div id="body">
+<ul>
+   <li><b><a href="/registry/headers/conditionalhttp.html">conditionalhttp</a></b> : <span class="registry-tag">1.4</span> <span class="registry-tag">1.5</span> <span class="registry-tag">core</span> Allows browser-side caching with if-not-modified-since.
+   <li><b><a href="/registry/headers/rewrite.html">rewrite</a></b> :  rewrite
+
+</ul>
+</div>
+<h2>images</h2>
+<div id="body">
+<ul>
+   <li><b><a href="/registry/images/portico.html">portico</a></b> :  portico
+
+</ul>
+</div>
+<h2>include</h2>
+<div id="body">
+<ul>
+   <li><b><a href="/registry/include/pyinclude.html">pyinclude</a></b> :  pyinclude
+
+</ul>
+</div>
+<h2>input</h2>
+<div id="body">
+<ul>
+   <li><b><a href="/registry/input/contact.html">contact</a></b> :  contact
+   <li><b><a href="/registry/input/pyguestpy.html">pyguest.py</a></b> :  pyguest.py
+   <li><b><a href="/registry/input/standalonetrackbacktool.html">standalonetrackbacktool</a></b> :  standalonetrackbacktool
+   <li><b><a href="/registry/input/weblog-add.html">weblog-add</a></b> :  weblog-add
+
+</ul>
+</div>
+<h2>interpolate</h2>
+<div id="body">
+<ul>
+   <li><b><a href="/registry/interpolate/tagger.html">tagger</a></b> :  tagger
+
+</ul>
+</div>
+<h2>link/amazon</h2>
+<div id="body">
+<ul>
+   <li><b><a href="/registry/link/amazon/wbgamazon.html">wbgamazon</a></b> :  wbgamazon
+
+</ul>
+</div>
+<h2>logs</h2>
+<div id="body">
+<ul>
+   <li><b><a href="/registry/logs/logrequest.html">logrequest</a></b> :  logrequest
+   <li><b><a href="/registry/logs/logstats.html">logstats</a></b> :  logstats
+
+</ul>
+</div>
+<h2>meta</h2>
+<div id="body">
+<ul>
+   <li><b><a href="/registry/meta/folksonomy.html">Folksonomy</a></b> :  Folksonomy
+   <li><b><a href="/registry/meta/relateditems.html">Related items</a></b> :  Related items
+   <li><b><a href="/registry/meta/tag_cloud.html">Tag cloud</a></b> :  Tag cloud
+   <li><b><a href="/registry/meta/tags.html">Tags</a></b> :  Tags
+
+</ul>
+</div>
+<h2>openid</h2>
+<div id="body">
+<ul>
+   <li><b><a href="/registry/openid/openid_server.html">openid_server</a></b> :  openid_server
+
+</ul>
+</div>
+<h2>scripts/migration</h2>
+<div id="body">
+<ul>
+   <li><b><a href="/registry/scripts/migration/mt2blosxom.html">mt2blosxom</a></b> :  mt2blosxom
+
+</ul>
+</div>
+<h2>scripts</h2>
+<div id="body">
+<ul>
+   <li><b><a href="/registry/scripts/rdate.html">rdate</a></b> :  rdate
+
+</ul>
+</div>
+<h2>search</h2>
+<div id="body">
+<ul>
+   <li><b><a href="/registry/search/ajaxsearch.html">Ajax search</a></b> :  Ajax search
+   <li><b><a href="/registry/search/eg_xapian.html">eg_xapian</a></b> :  eg_xapian
+   <li><b><a href="/registry/search/lucene.html">lucene</a></b> :  lucene
+   <li><b><a href="/registry/search/lupysearch.html">lupy_search</a></b> :  lupy_search
+
+</ul>
+</div>
+<h2>syndication</h2>
+<div id="body">
+<ul>
+   <li><b><a href="/registry/syndication/atom1renderer.html">atom1renderer</a></b> :  atom1renderer
+   <li><b><a href="/registry/syndication/rss2renderer.html">rss2renderer</a></b> :  rss2renderer
+   <li><b><a href="/registry/syndication/weblogsping.html">weblogsping</a></b> :  weblogsping
+
+</ul>
+</div>
+<h2>tags</h2>
+<div id="body">
+<ul>
+   <li><b><a href="/registry/tags/tags.html">tags</a></b> : <span class="registry-tag">1.5</span> <span class="registry-tag">core</span> Tags plugin
+
+</ul>
+</div>
+<h2>text</h2>
+<div id="body">
+<ul>
+   <li><b><a href="/registry/text/Native.html">Native</a></b> :  Native
+   <li><b><a href="/registry/text/pythonmarkdown.html">PyBlosxom Python Markdown 2</a></b> : <span class="registry-tag">1.5</span> Python Markdown 2.x support for blog entries
+   <li><b><a href="/registry/text/acronyms.html">acronyms</a></b> : <span class="registry-tag">1.5</span> <span class="registry-tag">core</span> Marks acronyms and abbreviations in blog entries.
+   <li><b><a href="/registry/text/genericwiki.html">genericwiki</a></b> :  genericwiki
+   <li><b><a href="/registry/text/htmlentryparser.html">htmlentryparser</a></b> :  htmlentryparser
+   <li><b><a href="/registry/text/linebreaks.html">linebreaks</a></b> :  linebreaks
+   <li><b><a href="/registry/text/markdown_parser.html">markdown_parser</a></b> : <span class="registry-tag">1.5</span> <span class="registry-tag">core</span> Markdown entry parser
+   <li><b><a href="/registry/text/moinmoin.html">moinmoin</a></b> :  moinmoin
+   <li><b><a href="/registry/text/py.html">py</a></b> :  py
+   <li><b><a href="/registry/text/rst_parser.html">rst_parser</a></b> : <span class="registry-tag">1.5</span> <span class="registry-tag">core</span> restructured text support for blog entries
+
+</ul>
+</div>
+<h2>xmlrpc</h2>
+<div id="body">
+<ul>
+   <li><b><a href="/registry/xmlrpc/bloggerapi.html">bloggerapi</a></b> :  bloggerapi
+   <li><b><a href="/registry/xmlrpc/metaweblog.html">metaweblog</a></b> :  metaweblog
+   <li><b><a href="/registry/xmlrpc/xmlrpcdispatcher.html">xmlrpc dispatcher plugin</a></b> :  xmlrpc dispatcher plugin
+   <li><b><a href="/registry/xmlrpc/xmlrpcneweditpy.html">xmlrpc_newedit.py</a></b> :  xmlrpc_newedit.py
+   <li><b><a href="/registry/xmlrpc/xmlrpc_pingback.html">xmlrpc_pingback</a></b> : <span class="registry-tag">1.4</span> <span class="registry-tag">core</span> XMLRPC pingback support.
+
+</ul>
+</div>
+  </td>
+</tr>
+</table>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+
+
+
+
+      <!-- Site footer -->
+      <div class="footer">
+        <p>Website content and documentation are both released under the
+		<a href="http://creativecommons.org/publicdomain/zero/1.0/">CC0 Licence</a></p>
+      </div>
+
+    </div> <!-- /container -->
+
+
+
+    <script src="bootstrap3/js/jquery.js"></script>
+    <script src="bootstrap3/js/bootstrap.min.js"></script>    
+  </body>
+</html>

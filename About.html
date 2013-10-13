@@ -1,0 +1,213 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+
+    <title>PyBlosxom - THE Python-Based Flatfile Blog Engine</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap3/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="bootstrap3/css/justified-nav.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="bootstrap3/js/html5shiv.js"></script>
+      <script src="bootstrap3/js/respond.min.js"></script>
+    <![endif]-->
+    <style type="text/css">
+	.pyb_lists li{
+		padding-bottom: 4px;
+	}
+	#bigspacer{
+		padding-bottom: 30px;
+		padding-top: 30px;
+	}
+
+	.mainlogo {
+		margin-top: 4em;
+	}
+	
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+.tint {	
+	background-color: rgb(245, 245, 245);
+}
+
+	.spaced {
+		margin-right: 6px;
+		margin-left: 6px;
+	}
+	</style>
+  </head>
+
+  <body>
+
+    <div class="container">
+
+
+ <div class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="http://pyblosxom.github.io">PyBlosxom</a>
+          </div>
+          <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+              <li><a href="http://pyblosxom.github.io">Home</a></li>
+              <li><a href="About.html">About</a></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Download <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                
+				  <li class="dropdown-header">Releases</li>
+                  <li><a href="Downloads/latest.tar.gz">Latest Release</a></li>
+                  <li><a href="Downloads/index.html">Legacy Releases</a></li>     
+                               
+                  <li class="divider"></li>
+                  <li class="dropdown-header">Plugins/Themes</li>
+                  <li><a href="Plugins.html">Get Plugins</a></li>
+                  <li><a href="Flavours.html">Get Themes/Flavours</a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Documentation <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                
+				  <li class="dropdown-header">Current Docs (1.5)</li>
+                  <li><a href="Documentation/1.5/install.html">QuickStart</a></li>
+                  <li><a href="Documentation/1.5/index.html">Full Documentation</a></li>     
+                               
+                  <li class="divider"></li>
+                  <li class="dropdown-header">Legacy Documentation</li>
+                  <li><a href="Documentation/1.4/manual/index.html">PyBlosxom 1.4</a></li>
+                  <li><a href="Documentation/1.4/api/index.html">PyBlosxom 1.4 API</a></li>
+                  <li><a href="Documentation/1.3.1/manual/index.html">PyBlosxom 1.3</a></li>
+                  <li><a href="Documentation/1.3.1/api/index.html">PyBlosxom 1.3 API</a></li>
+                </ul>
+              </li>
+              <li><a href="Community.html">Community</a></li>
+              <li><a href="https://github.com/pyblosxom/">Github</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+
+
+     
+
+
+      <!-- Jumbotron -->
+      <div class="mainlogo">
+       <img src="Images/mainlogo.png">
+      </div>
+      
+      
+
+      
+      
+<h2>What is Pyblosxom</h2>
+<p>Pyblosxom is a lightweight blog system.  It was originally a Python
+clone of <a class="reference external" href="http://www.blosxom.com/">Blosxom</a> but has since evolved into a blog system of its
+own reminiscent of <a class="reference external" href="http://www.blosxom.com/">Blosxom</a>.</p>
+<p>Pyblosxom focuses on three things:</p>
+<p><h3>Simplicity</h3></p>
+
+<div><p>Pyblosxom stores all data on the file system in plain text files.
+This allows you to use any text editor to create, update and
+manipulate entries.  You can also use existing text-manipulation
+tools, version control, scripts, grep, ...  for managing your blog.</p>
+<p>Pyblosxom can run as a CGI script, WSGI component or you can use it
+to statically compile your website into HTML/XML files.</p>
+<p>Your workflow is your workflow.</p>
+</div>
+<p><h3>Extensibility</h3></p>
+
+<div><p>Pyblosxom has a plugin framework enabling you to augment and enhance
+Pyblosxom’s default behavior.  Plugins are written in Python.  We
+maintain a list of plugins in the plugin registry on the website.</p>
+<p>Plugins aren’t hard to write.  We’re happy to help you write
+plugins.</p>
+</div>
+<p><h3>Community</h3></p>
+
+<div>There are several hundred Pyblosxom users out there all of whom have
+different needs.  Pyblosxom is used on a variety of operating
+systems in a variety of environments.  We have the standard open
+source project fare: mailing lists, IRC channel, wiki, ...</div>
+<p>Pyblosxom is built to let you use existing text-manipulation tools
+without having to build the whole ecology from scratch.</p>
+<p>Pyblosxom can be run as:</p>
+<ul class="simple">
+<li>a “static renderer” and compile your blog</li>
+<li>a CGI script</li>
+<li>a WSGI application</li>
+</ul>
+
+
+
+
+<h2>Overview of Pyblosxom</h2>
+<p>Entries, categories, storage:</p>
+<ul class="simple">
+<li>Pyblosxom stores everything as files on the file system—there is
+no database.</li>
+<li>Each blog entry is a file.</li>
+<li>Blog entry files are stored in a directory hierarchy in your <em>datadir</em>.</li>
+<li>Each subdirectory in your <em>datadir</em> corresponds to a category of
+your blog.</li>
+</ul>
+<p>Themes:</p>
+<ul class="simple">
+<li>Themes in Pyblosxom are called <em>flavours</em>.</li>
+<li>A flavour consists of a set of <em>templates</em>.</li>
+<li>Flavours are stored in a directory called the <em>flavourdir</em>.</li>
+<li>Pyblosxom comes with several flavours: html, rss20, and atom.</li>
+<li>The website maintains a flavour
+registry for flavours contributed by people like you.</li>
+<li>There’s more information on flavours and templates in
+the Flavours and Templates chapter of the manual
+(<tt class="docutils literal"><span class="pre">docs/flavours_and_templates.rst</span></tt> if you’re looking at the source).</li>
+</ul>
+<p>Plugins:</p>
+<ul class="simple">
+<li>Pyblosxom has a plugin system.</li>
+<li>Plugins are written in Python.</li>
+<li>Plugins are loaded using the <tt class="docutils literal"><span class="pre">plugin_dirs</span></tt> and <tt class="docutils literal"><span class="pre">load_plugins</span></tt>
+configuration variables.</li>
+<li>The website maintains a plugin
+registry for plugins submitted by people like you.</li>
+<li>For more information on using plugins, see Plugins in the manual
+(<tt class="docutils literal"><span class="pre">docs/plugins.rst</span></tt> if you’re looking at the source).</li>
+<li>For more information on writing plugins see Writing Plugins
+(<tt class="docutils literal"><span class="pre">docs/dev_writing_plugins.rst</span></tt> if you’re looking at the source).</li>
+
+
+
+
+      <!-- Site footer -->
+      <div class="footer">
+        <p>Website content and documentation are both released under the
+		<a href="http://creativecommons.org/publicdomain/zero/1.0/">CC0 Licence</a></p>
+      </div>
+
+    </div> <!-- /container -->
+
+
+
+    <script src="bootstrap3/js/jquery.js"></script>
+    <script src="bootstrap3/js/bootstrap.min.js"></script>    
+  </body>
+</html>

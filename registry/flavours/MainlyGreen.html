@@ -1,84 +1,130 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/frameset.dtd">
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-<html>
-<head>
-   <title>Pyblosxom - main site</title>
-   <link rel="stylesheet" href="/default.css" type="text/css" />
-   <link rel="alternate" type="application/xml" title="RSS" href="/news/index.xml" />
-   <link rel="top" href="/" title="pyblosxom.bluesock.org" />
-   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-</head>
 
-<body>
-<table width="100%">
-<tr>
-  <td valign="top" width="200" class="menu">
+    <title>PyBlosxom - THE Python-Based Flatfile Blog Engine</title>
 
-<p><b>Contents</b></p>
-<p>
-  <a href="/" class="menulink">home</a><br />
-  <a href="/news/" class="menulink">news</a><br />
-  <a href="/bugs/" class="menulink">bugtracker</a><br />
-  <a href="/static/documentation.html" class="menulink">documentation</a><br />
-  <a href="/1.5/dev_contributing.html" class="menulink">patches</a><br />
-</p>
+    <!-- Bootstrap core CSS -->
+    <link href="/bootstrap3/css/bootstrap.css" rel="stylesheet">
 
-<p><b>Community</b></p>
-<p>
-  <!-- broken <a href="/pyblosxom_users.html" class="menulink">pyblosxom users</a><br /> -->
-  <a href="/registry/flavours/" class="menulink">flavour registry</a><br />
-  <a href="/registry/" class="menulink">plugin registry</a><br />   
-  <a href="/#pyblosxomusers" class="menulink">pyblosxom-users list</a><br />
-  <a href="/#pyblosxomdevel" class="menulink">pyblosxom-devel list</a><br />
-  <a href="/#irc" class="menulink">irc</a><br />
-</p>
+    <!-- Custom styles for this template -->
+    <link href="/bootstrap3/css/justified-nav.css" rel="stylesheet">
 
-<p><b>Install</b></p>
-<pre>
-pip install pyblosxom
-</pre>
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="/bootstrap3/js/html5shiv.js"></script>
+      <script src="/bootstrap3/js/respond.min.js"></script>
+    <![endif]-->
+    <style type="text/css">
+	.pyb_lists li{
+		padding-bottom: 4px;
+	}
+	#bigspacer{
+		padding-bottom: 30px;
+		padding-top: 30px;
+	}
 
-<p><b>Download</b></p>
-<p>
-  <a href="/download/" class="menulink">download</a><br />
-</p>
+	.mainlogo {
+		margin-top: 4em;
+	}
+	
+img {
+	max-width: 100%;
+	height: auto;
+}
 
-<p><b>News Archives</b></p>
-<p>
-  <a href="/2013/index.html">2013</a><br />
-<a href="/2012/index.html">2012</a><br />
-<a href="/2011/index.html">2011</a><br />
-<a href="/2010/index.html">2010</a><br />
-<a href="/2009/index.html">2009</a><br />
-<a href="/2008/index.html">2008</a><br />
-<a href="/2007/index.html">2007</a><br />
-<a href="/2006/index.html">2006</a><br />
-<a href="/2005/index.html">2005</a><br />
-<a href="/2004/index.html">2004</a><br />
-</p>
+.tint {	
+	background-color: rgb(245, 245, 245);
+}
 
-<p><b>Syndicate</b></p>
-<p>
-  <a href="/news/index.xml" class="menulink"><img border="0" src="/images/xml.gif" alt="news RSS 2.0"> news RSS</a><br />
-</p>
+	.spaced {
+		margin-right: 6px;
+		margin-left: 6px;
+	}
+	</style>
+  </head>
 
-<p>
-<a href="http://pyblosxom.github.com/"><img src="/images/pb_pyblosxom.gif" border="0" alt="powered by pyblosxom"/></a>
-</p>
-  </td>
-  <td valign="top">
+  <body>
 
-<h1>Pyblosxom Flavour Registry</h1>
-<p>
-  Welcome to the Pyblosxom flavour registry.
-</p>
-<p>
-  [
-  <a href="/registry/flavours/?sortby=path">Sorted by category</a> |
-  <a href="/registry/flavours/?sortby=date">Sorted by date</a> |
-  <a href="/static/registry_submit.html">Submit new flavour</a>
-  ]
-</p>
+    <div class="container">
+
+
+ <div class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">PyBlosxom</a>
+          </div>
+          <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+              <li><a href="/">Home</a></li>
+              <li><a href="/About.html">About</a></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Download <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                
+				  <li class="dropdown-header">Releases</li>
+                  <li><a href="/Downloads/latest.tar.gz">Latest Release</a></li>
+                  <li><a href="/Downloads/index.html">Legacy Releases</a></li>     
+                               
+                  <li class="divider"></li>
+                  <li class="dropdown-header">Plugins/Themes</li>
+                  <li><a href="/Plugins.html">Get Plugins</a></li>
+                  <li><a href="/Flavours.html">Get Themes/Flavours</a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Documentation <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                
+				  <li class="dropdown-header">Current Docs (1.5)</li>
+                  <li><a href="/Documentation/1.5/install.html">QuickStart</a></li>
+                  <li><a href="/Documentation/1.5/index.html">Full Documentation</a></li>     
+                               
+                  <li class="divider"></li>
+                  <li class="dropdown-header">Legacy Documentation</li>
+                  <li><a href="/Documentation/1.4/manual/index.html">PyBlosxom 1.4</a></li>
+                  <li><a href="/Documentation/1.4/api/index.html">PyBlosxom 1.4 API</a></li>
+                  <li><a href="/Documentation/1.3.1/manual/index.html">PyBlosxom 1.3</a></li>
+                  <li><a href="/Documentation/1.3.1/api/index.html">PyBlosxom 1.3 API</a></li>
+                </ul>
+              </li>
+              <li><a href="/Community.html">Community</a></li>
+              <li><a href="https://github.com/pyblosxom/">Github</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+
+
+     
+
+
+      <!-- Jumbotron -->
+      <div class="mainlogo">
+       <img src="/Images/mainlogo.png">
+      </div>
+      
+      
+
+      
+      
+  
+      
+
+
+
+
+
 
 
 
@@ -118,11 +164,18 @@ for installation.  (will guaraldi)
 
 </div>
 </div>
-  </td>
-</tr>
-</table>
-<p>
-  Built with pyblosxom 1.5.2. Website content and documentation is released under the <a href="http://creativecommons.org/publicdomain/zero/1.0/">CC0 Licence</a>.
-</p>
-</body>
+
+      <!-- Site footer -->
+      <div class="footer">
+        <p>Website content and documentation are both released under the
+		<a href="http://creativecommons.org/publicdomain/zero/1.0/">CC0 Licence</a></p>
+      </div>
+
+    </div> <!-- /container -->
+
+
+
+    <script src="/bootstrap3/js/jquery.js"></script>
+    <script src="/bootstrap3/js/bootstrap.min.js"></script>    
+  </body>
 </html>
