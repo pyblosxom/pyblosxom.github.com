@@ -122,12 +122,13 @@ Apache web server with mod_wsgi installed.</p>
 </td></tr></table></div>
 </li>
 <li><p class="first">In the Apache conf file, add:</p>
-<div class="highlight-python"><pre>WSGIScriptAlias /myblog /path/to/something.wsgi
+<div class="highlight-python"><div class="highlight"><pre>WSGIScriptAlias /myblog /path/to/something.wsgi
 
 &lt;Directory /path/to&gt;
     Order deny,allow
     Allow from all
-&lt;/Directory&gt;</pre>
+&lt;/Directory&gt;
+</pre></div>
 </div>
 <p>Change <tt class="docutils literal"><span class="pre">/myblog</span></tt> to the url path you want your blog to live at.</p>
 <p>Change <tt class="docutils literal"><span class="pre">/path/to/something.wsgi</span></tt> to be the absolute path to the
@@ -209,8 +210,8 @@ configuration), you&#8217;ll have to restart Apache.</p>
     </div>
     <div class="footer">
         &copy; Copyright Creative Commons CC0 - http://creativecommons.org/publicdomain/zero/1.0/.
-      Last updated on Jul 31, 2013.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2b1.
+      Last updated on Jul 25, 2014.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
     </div>
   </body>
 </html>

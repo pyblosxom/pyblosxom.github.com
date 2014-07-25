@@ -75,27 +75,28 @@ Disqus when you set up your account.</p>
 </li>
 </ol>
 <p>comment_form template:</p>
-<div class="highlight-python"><pre>&lt;div id="disqus_thread"&gt;&lt;/div&gt;
-&lt;script type="text/javascript"&gt;
-  var disqus_shortname = '$(escape(disqus_shortname))';
-  var disqus_identifier = '$(escape(disqus_id))';
-  var disqus_title = '$(escape(title))';
+<div class="highlight-python"><div class="highlight"><pre>&lt;div id=&quot;disqus_thread&quot;&gt;&lt;/div&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+  var disqus_shortname = &#39;$(escape(disqus_shortname))&#39;;
+  var disqus_identifier = &#39;$(escape(disqus_id))&#39;;
+  var disqus_title = &#39;$(escape(title))&#39;;
 
-  /* * * DON'T EDIT BELOW THIS LINE * * */
+  /* * * DON&#39;T EDIT BELOW THIS LINE * * */
   (function() {
-    var dsq = document.createElement('script');
-    dsq.type = 'text/javascript';
+    var dsq = document.createElement(&#39;script&#39;);
+    dsq.type = &#39;text/javascript&#39;;
     dsq.async = true;
-    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
-    (document.getElementsByTagName('head')[0] ||
-     document.getElementsByTagName('body')[0]).appendChild(dsq);
+    dsq.src = &#39;http://&#39; + disqus_shortname + &#39;.disqus.com/embed.js&#39;;
+    (document.getElementsByTagName(&#39;head&#39;)[0] ||
+     document.getElementsByTagName(&#39;body&#39;)[0]).appendChild(dsq);
   })();
 &lt;/script&gt;
 &lt;noscript&gt;Please enable JavaScript to view the
-  &lt;a href="http://disqus.com/?ref_noscript"&gt;comments powered by Disqus.&lt;/a&gt;
+  &lt;a href=&quot;http://disqus.com/?ref_noscript&quot;&gt;comments powered by Disqus.&lt;/a&gt;
 &lt;/noscript&gt;
-&lt;a href="http://disqus.com" class="dsq-brlink"
-  &gt;blog comments powered by &lt;span class="logo-disqus"&gt;Disqus&lt;/span&gt;&lt;/a&gt;</pre>
+&lt;a href=&quot;http://disqus.com&quot; class=&quot;dsq-brlink&quot;
+  &gt;blog comments powered by &lt;span class=&quot;logo-disqus&quot;&gt;Disqus&lt;/span&gt;&lt;/a&gt;
+</pre></div>
 </div>
 </div>
 <div class="section" id="license">
@@ -168,8 +169,8 @@ Disqus when you set up your account.</p>
     </div>
     <div class="footer">
         &copy; Copyright Creative Commons CC0 - http://creativecommons.org/publicdomain/zero/1.0/.
-      Last updated on Jul 31, 2013.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2b1.
+      Last updated on Jul 25, 2014.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
     </div>
   </body>
 </html>

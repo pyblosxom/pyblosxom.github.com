@@ -68,10 +68,12 @@ If this doesn&#8217;t sound like you, then you can read up on Paste on the
 <ul>
 <li><p class="first">Python Paste which can be found at <a class="reference external" href="http://pythonpaste.org/">http://pythonpaste.org/</a></p>
 <p>If you have <tt class="docutils literal"><span class="pre">pip</span></tt>, then do:</p>
-<div class="highlight-python"><pre>pip install pastescript</pre>
+<div class="highlight-python"><div class="highlight"><pre>pip install pastescript
+</pre></div>
 </div>
 <p>Or if you have <tt class="docutils literal"><span class="pre">easy_install</span></tt>, then do:</p>
-<div class="highlight-python"><pre>easy_install pastescript</pre>
+<div class="highlight-python"><div class="highlight"><pre>easy_install pastescript
+</pre></div>
 </div>
 </li>
 </ul>
@@ -79,11 +81,13 @@ If this doesn&#8217;t sound like you, then you can read up on Paste on the
 <div class="section" id="deployment-for-testing">
 <h2>Deployment for testing<a class="headerlink" href="#deployment-for-testing" title="Permalink to this headline">¶</a></h2>
 <p>Create a new blog by doing:</p>
-<div class="highlight-python"><pre>pyblosxom-cmd create &lt;BLOG-DIR&gt;</pre>
+<div class="highlight-python"><div class="highlight"><pre>pyblosxom-cmd create &lt;BLOG-DIR&gt;
+</pre></div>
 </div>
 <p>Then do:</p>
-<div class="highlight-python"><pre>cd &lt;BLOG-DIR&gt;
-paster serve blog.ini</pre>
+<div class="highlight-python"><div class="highlight"><pre>cd &lt;BLOG-DIR&gt;
+paster serve blog.ini
+</pre></div>
 </div>
 <p>The <tt class="docutils literal"><span class="pre">paster</span></tt> script will print the URL for your blog on the command
 line and your blog is now available on your local machine to a browser
@@ -100,19 +104,21 @@ section.</p>
 <p>The <tt class="docutils literal"><span class="pre">[app:main]</span></tt> section specifies the Pyblosxom WSGI application
 function and the directory your <tt class="docutils literal"><span class="pre">config.py</span></tt> file is in.  A
 sample is here:</p>
-<div class="highlight-python"><pre>[app:main]
+<div class="highlight-python"><div class="highlight"><pre>[app:main]
 paste.app_factory = Pyblosxom.pyblosxom:pyblosxom_app_factory
-configpydir = /home/joe/blog/</pre>
+configpydir = /home/joe/blog/
+</pre></div>
 </div>
 <p>Additionally, you can override <tt class="docutils literal"><span class="pre">config.py</span></tt> values in your
 <tt class="docutils literal"><span class="pre">blog.ini</span></tt>.  For example, this overrides the <tt class="docutils literal"><span class="pre">blog_title</span></tt>
 value:</p>
-<div class="highlight-python"><pre>[app:main]
+<div class="highlight-python"><div class="highlight"><pre>[app:main]
 paste.app_factory = Pyblosxom.pyblosxom:pyblosxom_app_factory
 configpydir = /home/joe/blog/
 
 # Pyblosxom config here
-blog_title = Joe's Blog</pre>
+blog_title = Joe&#39;s Blog
+</pre></div>
 </div>
 <p>This is really handy for testing changes to your blog infrastructure.</p>
 </div>
@@ -183,8 +189,8 @@ blog_title = Joe's Blog</pre>
     </div>
     <div class="footer">
         &copy; Copyright Creative Commons CC0 - http://creativecommons.org/publicdomain/zero/1.0/.
-      Last updated on Jul 31, 2013.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2b1.
+      Last updated on Jul 25, 2014.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
     </div>
   </body>
 </html>

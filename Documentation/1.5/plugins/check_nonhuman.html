@@ -89,13 +89,15 @@ your load_plugins list in your config.py file.</p>
 <p>Then add the following to your comment-form template just above the
 submit button (make sure to match the input name to your configured
 input name):</p>
-<div class="highlight-python"><pre>&lt;input type="checkbox" name="iamhuman" value="yes"&gt;
-Yes, I am human!</pre>
+<div class="highlight-python"><div class="highlight"><pre>&lt;input type=&quot;checkbox&quot; name=&quot;iamhuman&quot; value=&quot;yes&quot;&gt;
+Yes, I am human!
+</pre></div>
 </div>
 <p>Alternatively, if you set the <tt class="docutils literal"><span class="pre">nonhuman_name</span></tt> property, then you should
 do this:</p>
-<div class="highlight-python"><pre>&lt;input type="checkbox" name="$(nonhuman_name)" value="yes"&gt;
-Yes, I am human!</pre>
+<div class="highlight-python"><div class="highlight"><pre>&lt;input type=&quot;checkbox&quot; name=&quot;$(nonhuman_name)&quot; value=&quot;yes&quot;&gt;
+Yes, I am human!
+</pre></div>
 </div>
 <p>Additionally, the nonhuman plugin can log when it rejected a comment.
 This is good for statistical purposes.  1 if &#8220;yes, I want to log&#8221; and
@@ -105,7 +107,8 @@ This is good for statistical purposes.  1 if &#8220;yes, I want to log&#8221; an
 </div>
 <p>And that&#8217;s it!</p>
 <p>The idea came from:</p>
-<div class="highlight-python"><pre>http://www.davidpashley.com/cgi/pyblosxom.cgi/2006/04/28#blog-spam</pre>
+<div class="highlight-python"><div class="highlight"><pre>http://www.davidpashley.com/cgi/pyblosxom.cgi/2006/04/28#blog-spam
+</pre></div>
 </div>
 </div>
 <div class="section" id="license">
@@ -179,8 +182,8 @@ This is good for statistical purposes.  1 if &#8220;yes, I want to log&#8221; an
     </div>
     <div class="footer">
         &copy; Copyright Creative Commons CC0 - http://creativecommons.org/publicdomain/zero/1.0/.
-      Last updated on Jul 31, 2013.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2b1.
+      Last updated on Jul 25, 2014.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
     </div>
   </body>
 </html>

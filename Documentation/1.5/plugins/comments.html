@@ -121,10 +121,12 @@ this feature, create the following config.py entries:</p>
 py[&#8216;comment_smtp_to&#8217;]   - the email address receiving the notification</p>
 </div></blockquote>
 <p>If you want to use an SMTP server, then set:</p>
-<div class="highlight-python"><pre>py['comment_smtp_server'] - your SMTP server hostname/ip address</pre>
+<div class="highlight-python"><div class="highlight"><pre>py[&#39;comment_smtp_server&#39;] - your SMTP server hostname/ip address
+</pre></div>
 </div>
 <p><strong>OR</strong> if you want to use a mail command, set:</p>
-<div class="highlight-python"><pre>py['comment_mta_cmd']     - the path to your MTA, e.g. /usr/bin/mail</pre>
+<div class="highlight-python"><div class="highlight"><pre>py[&#39;comment_mta_cmd&#39;]     - the path to your MTA, e.g. /usr/bin/mail
+</pre></div>
 </div>
 <p>Example 1:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="n">py</span><span class="p">[</span><span class="s">&#39;comment_smtp_from&#39;</span><span class="p">]</span>   <span class="o">=</span> <span class="s">&quot;joe@joe.com&quot;</span>
@@ -230,7 +232,7 @@ section before the comments and the comment form.</p>
 <p>The <tt class="docutils literal"><span class="pre">comment</span></tt> template is used to format a single entry that has
 comments.</p>
 <p>Variables available:</p>
-<div class="highlight-python"><pre>$cmt_title - the title of the comment
+<div class="highlight-python"><div class="highlight"><pre>$cmt_title - the title of the comment
 $cmt_description - the content of the comment or excerpt of the
                    trackback/pingback
 $cmt_link - the pingback link referring to this entry
@@ -238,7 +240,8 @@ $cmt_author - the author of the comment or trackback
 $cmt_optionally_linked_author - the author, wrapped in an &lt;a href&gt; tag
                                 to their link if one was provided
 $cmt_pubDate - the date and time of the comment/trackback/pingback
-$cmt_source - the source of the trackback</pre>
+$cmt_source - the source of the trackback
+</pre></div>
 </div>
 <p>Link to file: <a class="reference external" href="../_static/plugins/comments/comment">comment</a></p>
 <div class="highlight-html"><div class="highlight"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;blosxomComment&quot;</span><span class="nt">&gt;</span>
@@ -328,17 +331,19 @@ per entry.</p>
 <p>If you would like comment previews, you need to do 2 things.</p>
 <ol class="arabic">
 <li><p class="first">Add a preview button to comment-form.html like this:</p>
-<div class="highlight-python"><pre>&lt;input name="preview" type="submit" value="Preview" /&gt;</pre>
+<div class="highlight-python"><div class="highlight"><pre>&lt;input name=&quot;preview&quot; type=&quot;submit&quot; value=&quot;Preview&quot; /&gt;
+</pre></div>
 </div>
 <p>You may change the contents of the value attribute, but the name of
 the input must be &#8220;preview&#8221;.</p>
 </li>
 <li><p class="first">Still in your <tt class="docutils literal"><span class="pre">comment-form.html</span></tt> template, you need to use the
 comment values to fill in the values of your input fields like so:</p>
-<div class="highlight-python"><pre>&lt;input name="author" type="text" value="$(cmt_author)"&gt;
-&lt;input name="email" type="text" value="$(cmt_email)"&gt;
-&lt;input name="url" type="text" value="$(cmt_link)"&gt;
-&lt;textarea name="body"&gt;$(cmt_description)&lt;/textarea&gt;</pre>
+<div class="highlight-python"><div class="highlight"><pre>&lt;input name=&quot;author&quot; type=&quot;text&quot; value=&quot;$(cmt_author)&quot;&gt;
+&lt;input name=&quot;email&quot; type=&quot;text&quot; value=&quot;$(cmt_email)&quot;&gt;
+&lt;input name=&quot;url&quot; type=&quot;text&quot; value=&quot;$(cmt_link)&quot;&gt;
+&lt;textarea name=&quot;body&quot;&gt;$(cmt_description)&lt;/textarea&gt;
+</pre></div>
 </div>
 <p>If there is no preview available, these variables will be stripped
 from the text and cause no problem.</p>
@@ -364,12 +369,14 @@ alternative protocols are detected, like <tt class="docutils literal"><span clas
 <ol class="arabic">
 <li><p class="first">The comment-anchor tag must be the first thing in the
 <tt class="docutils literal"><span class="pre">comment-form</span></tt> template:</p>
-<div class="highlight-python"><pre>&lt;p id="comment-anchor" /&gt;</pre>
+<div class="highlight-python"><div class="highlight"><pre>&lt;p id=&quot;comment-anchor&quot; /&gt;
+</pre></div>
 </div>
 </li>
 <li><p class="first">Change the <tt class="docutils literal"><span class="pre">&lt;form...&gt;</span></tt> tag to something like this:</p>
-<div class="highlight-python"><pre>&lt;form method="post" action="$(base_url)/$(file_path)#comment-anchor"
-   name="comments_form" id="comments_form" onsubmit="return false;"&gt;</pre>
+<div class="highlight-python"><div class="highlight"><pre>&lt;form method=&quot;post&quot; action=&quot;$(base_url)/$(file_path)#comment-anchor&quot;
+   name=&quot;comments_form&quot; id=&quot;comments_form&quot; onsubmit=&quot;return false;&quot;&gt;
+</pre></div>
 </div>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
@@ -382,10 +389,11 @@ AJAX comment previewing and posting don&#8217;t work, try removing
 </div>
 </li>
 <li><p class="first">Add <tt class="docutils literal"><span class="pre">onclick</span></tt> handlers to the button input tags:</p>
-<div class="highlight-python"><pre>&lt;input value="Preview" name="preview" type="button" id="preview"
-    onclick="send_comment('preview');" /&gt;
-&lt;input value="Submit" name="submit" type="button" id="post"
-    onclick="send_comment('post');" /&gt;</pre>
+<div class="highlight-python"><div class="highlight"><pre>&lt;input value=&quot;Preview&quot; name=&quot;preview&quot; type=&quot;button&quot; id=&quot;preview&quot;
+    onclick=&quot;send_comment(&#39;preview&#39;);&quot; /&gt;
+&lt;input value=&quot;Submit&quot; name=&quot;submit&quot; type=&quot;button&quot; id=&quot;post&quot;
+    onclick=&quot;send_comment(&#39;post&#39;);&quot; /&gt;
+</pre></div>
 </div>
 </li>
 <li><p class="first">Copy <tt class="docutils literal"><span class="pre">comments.js</span></tt> file to a location on your server that&#8217;s
@@ -393,7 +401,8 @@ servable by your web server.</p>
 <p>You can find this file <a class="reference external" href="../_static/plugins/comments/">here</a>.</p>
 </li>
 <li><p class="first">Include this script tag somewhere after the <tt class="docutils literal"><span class="pre">&lt;/form&gt;</span></tt> closing tag:</p>
-<div class="highlight-python"><pre>&lt;script type="text/javascript" src="/comments.js"&gt;&lt;/script&gt;</pre>
+<div class="highlight-python"><div class="highlight"><pre>&lt;script type=&quot;text/javascript&quot; src=&quot;/comments.js&quot;&gt;&lt;/script&gt;
+</pre></div>
 </div>
 <p>Set the url for <tt class="docutils literal"><span class="pre">comments.js</span></tt> to the url for where
 <tt class="docutils literal"><span class="pre">comments.js</span></tt> is located on your server from step 4.</p>
@@ -520,8 +529,8 @@ entry.</p>
     </div>
     <div class="footer">
         &copy; Copyright Creative Commons CC0 - http://creativecommons.org/publicdomain/zero/1.0/.
-      Last updated on Jul 31, 2013.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2b1.
+      Last updated on Jul 25, 2014.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
     </div>
   </body>
 </html>

@@ -135,36 +135,39 @@ entry file.</p>
 <div class="section" id="examples">
 <h3>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h3>
 <p>Here&#8217;s an example first post entry with a title and a body:</p>
-<div class="highlight-python"><pre>This is my first post!
+<div class="highlight-python"><div class="highlight"><pre>This is my first post!
 &lt;p&gt;
   This is the body of the first post to my blog.
-&lt;/p&gt;</pre>
+&lt;/p&gt;
+</pre></div>
 </div>
 <p>Here&#8217;s a more complex example with a title and a body:</p>
-<div class="highlight-python"><pre>The rain in Spain....
+<div class="highlight-python"><div class="highlight"><pre>The rain in Spain....
 &lt;p&gt;
   The rain
 &lt;/p&gt;
-&lt;p align="center"&gt;
+&lt;p align=&quot;center&quot;&gt;
   in Spain
 &lt;/p&gt;
-&lt;p align="right"&gt;
-  is &lt;font color="ff0000"&gt;mainly&lt;/font&gt; on the plain.
-&lt;/p&gt;</pre>
+&lt;p align=&quot;right&quot;&gt;
+  is &lt;font color=&quot;ff0000&quot;&gt;mainly&lt;/font&gt; on the plain.
+&lt;/p&gt;
+</pre></div>
 </div>
 <p>Here&#8217;s an example of a post with title, metadata, and a body:</p>
-<div class="highlight-python"><pre>The rain in Spain....
+<div class="highlight-python"><div class="highlight"><pre>The rain in Spain....
 #mood bored
 #music The Doors - Greatest Hits Vol 1
 &lt;p&gt;
   The rain
 &lt;/p&gt;
-&lt;p align="center"&gt;
+&lt;p align=&quot;center&quot;&gt;
   in Spain
 &lt;/p&gt;
-&lt;p align="right"&gt;
-  is &lt;font color="ff0000"&gt;mainly&lt;/font&gt; on the plain.
-&lt;/p&gt;</pre>
+&lt;p align=&quot;right&quot;&gt;
+  is &lt;font color=&quot;ff0000&quot;&gt;mainly&lt;/font&gt; on the plain.
+&lt;/p&gt;
+</pre></div>
 </div>
 </div>
 </div>
@@ -174,7 +177,7 @@ entry file.</p>
 known as mtime) of the file itself as stored by your file system.
 Every time you go to edit an entry, it changes the modification time.
 You can see this in the following example of output:</p>
-<div class="highlight-python"><pre>willg ~/blog/entries/blosxom/site: vi testpost.txt                     [1]
+<div class="highlight-python"><div class="highlight"><pre>willg ~/blog/entries/blosxom/site: vi testpost.txt                     [1]
 willg ~/blog/entries/blosxom/site: ls -l
 total 16
 -rw-r--r--  1 willg willg 764 Jul 20  2003 minoradjustments.txt
@@ -187,7 +190,8 @@ total 16
 -rw-r--r--  1 willg willg 764 Jul 20  2003 minoradjustments.txt
 -rw-r--r--  1 willg willg 524 Jul 24  2003 moreminoradjustments.txt
 -rw-r--r--  1 willg willg 284 Aug 15  2004 nomorecalendar.txt
--rw-r--r--  1 willg willg  59 Mar 21 16:34 testpost.txt                [4]</pre>
+-rw-r--r--  1 willg willg  59 Mar 21 16:34 testpost.txt                [4]
+</pre></div>
 </div>
 <ol class="arabic simple">
 <li>I create the blog entry <tt class="docutils literal"><span class="pre">testpost.txt</span></tt> using <tt class="docutils literal"><span class="pre">vi</span></tt> (vi is a text
@@ -220,10 +224,11 @@ that maintains the file&#8217;s mtime.</p>
 is the same format that blosxom uses and is described in previous
 sections.</p>
 <p>A sample blog entry could look like this:</p>
-<div class="highlight-python"><pre>First post
+<div class="highlight-python"><div class="highlight"><pre>First post
 &lt;p&gt;
-  Here's the body of my first post.
-&lt;/p&gt;</pre>
+  Here&#39;s the body of my first post.
+&lt;/p&gt;
+</pre></div>
 </div>
 <p>Some people don&#8217;t like writing in HTML.  Other people use their
 entries in other places, so they need a different markup format.  Some
@@ -324,8 +329,8 @@ sources.</p>
     </div>
     <div class="footer">
         &copy; Copyright Creative Commons CC0 - http://creativecommons.org/publicdomain/zero/1.0/.
-      Last updated on Jul 31, 2013.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2b1.
+      Last updated on Jul 25, 2014.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
     </div>
   </body>
 </html>

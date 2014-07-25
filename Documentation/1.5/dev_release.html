@@ -62,18 +62,21 @@
 </ul>
 </li>
 <li><p class="first">Update AUTHORS:</p>
-<div class="highlight-python"><pre>git log --pretty=format:%an | sort -u</pre>
+<div class="highlight-python"><div class="highlight"><pre>git log --pretty=format:%an | sort -u
+</pre></div>
 </div>
 </li>
 <li><p class="first">Commit the changes</p>
 </li>
 <li><p class="first">Tag the commit:</p>
-<div class="highlight-python"><pre>git tag -a vx.y</pre>
+<div class="highlight-python"><div class="highlight"><pre>git tag -a vx.y
+</pre></div>
 </div>
 <p>e.g. <tt class="docutils literal"><span class="pre">v1.5</span></tt></p>
 </li>
 <li><p class="first">Run:</p>
-<div class="highlight-python"><pre>./maketarball.sh TAG</pre>
+<div class="highlight-python"><div class="highlight"><pre>./maketarball.sh TAG
+</pre></div>
 </div>
 </li>
 <li><p class="first">Push everything to <tt class="docutils literal"><span class="pre">pyblosxom</span></tt>.</p>
@@ -82,8 +85,9 @@
 </div></blockquote>
 </li>
 <li><p class="first">Build the docs:</p>
-<div class="highlight-python"><pre>cd docs/
-make html</pre>
+<div class="highlight-python"><div class="highlight"><pre>cd docs/
+make html
+</pre></div>
 </div>
 </li>
 <li><p class="first">Write release blog entry</p>
@@ -93,9 +97,10 @@ make html</pre>
 <li><p class="first">Push website changes to pyblosxom-web repository.</p>
 </li>
 <li><p class="first">Update PYPI using the release tarball:</p>
-<div class="highlight-python"><pre>tar -xzvf pyblosxom-x.y.tar.gz
+<div class="highlight-python"><div class="highlight"><pre>tar -xzvf pyblosxom-x.y.tar.gz
 cd pyblosxom-x.y
-python setup.py sdist upload</pre>
+python setup.py sdist upload
+</pre></div>
 </div>
 </li>
 <li><p class="first">Send email to pyblosxom-users and pyblosxom-devel.</p>
@@ -153,8 +158,8 @@ python setup.py sdist upload</pre>
     </div>
     <div class="footer">
         &copy; Copyright Creative Commons CC0 - http://creativecommons.org/publicdomain/zero/1.0/.
-      Last updated on Jul 31, 2013.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2b1.
+      Last updated on Jul 25, 2014.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
     </div>
   </body>
 </html>

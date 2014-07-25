@@ -84,11 +84,12 @@ Defaults to &#8221;,&#8221;.</p>
 <p>After splitting on the separator, each individual tag is stripped
 of whitespace before and after the text.</p>
 <p>For example:</p>
-<div class="highlight-python"><pre>Weather in Boston
+<div class="highlight-python"><div class="highlight"><pre>Weather in Boston
 #tags weather, boston
 &lt;p&gt;
   The weather in Boston today is pretty nice.
-&lt;/p&gt;</pre>
+&lt;/p&gt;
+</pre></div>
 </div>
 <p>returns tags <tt class="docutils literal"><span class="pre">weather</span></tt> and <tt class="docutils literal"><span class="pre">boston</span></tt>.</p>
 <p>If the <tt class="docutils literal"><span class="pre">tags_separator</span></tt> is:</p>
@@ -96,11 +97,12 @@ of whitespace before and after the text.</p>
 </pre></div>
 </div>
 <p>then tags could be declared in the entries like this:</p>
-<div class="highlight-python"><pre>Weather in Boston
+<div class="highlight-python"><div class="highlight"><pre>Weather in Boston
 #tags weather::boston
 &lt;p&gt;
   The weather in Boston today is pretty nice.
-&lt;/p&gt;</pre>
+&lt;/p&gt;
+</pre></div>
 </div>
 </div></blockquote>
 <p><tt class="docutils literal"><span class="pre">tags_filename</span></tt></p>
@@ -176,11 +178,12 @@ css class for this tag representing the frequency the tag is used</li>
 <div>Printed after the cloud.  Defaults to <tt class="docutils literal"><span class="pre">&lt;/p&gt;</span></tt>.</div></blockquote>
 <p>You&#8217;ll also want to add CSS classes for the size classes to your CSS.
 For example, you could add this:</p>
-<div class="highlight-python"><pre>.biggestTag { font-size: 16pt; }
+<div class="highlight-python"><div class="highlight"><pre>.biggestTag { font-size: 16pt; }
 .bigTag { font-size: 14pt }
 .mediumTag { font-size: 12pt }
 .smallTag { font-size: 10pt ]
-.smallestTag { font-size: 8pt ]</pre>
+.smallestTag { font-size: 8pt ]
+</pre></div>
 </div>
 <p>You can list the tags for a given entry in the story template with the
 <tt class="docutils literal"><span class="pre">$(tags)</span></tt> variable.  The tag items in the story are formatted with one
@@ -202,10 +205,12 @@ following bits:</p>
 <div class="section" id="creating-the-tags-index-file">
 <h2>Creating the tags index file<a class="headerlink" href="#creating-the-tags-index-file" title="Permalink to this headline">¶</a></h2>
 <p>Run:</p>
-<div class="highlight-python"><pre>pyblosxom-cmd buildtags</pre>
+<div class="highlight-python"><div class="highlight"><pre>pyblosxom-cmd buildtags
+</pre></div>
 </div>
 <p>from the directory your <tt class="docutils literal"><span class="pre">config.py</span></tt> is in or:</p>
-<div class="highlight-python"><pre>pyblosxom-cmd buildtags --config=/path/to/config/file</pre>
+<div class="highlight-python"><div class="highlight"><pre>pyblosxom-cmd buildtags --config=/path/to/config/file
+</pre></div>
 </div>
 <p>from anywhere.</p>
 <p>This builds the tags index file that the tags plugin requires to
@@ -233,10 +238,12 @@ back up your files (use tar or something that maintains file stats),
 then try it out and see how well it works, and figure out if that
 works or not.</p>
 <p>To run the command do:</p>
-<div class="highlight-python"><pre>pyblosxom-cmd categorytotags</pre>
+<div class="highlight-python"><div class="highlight"><pre>pyblosxom-cmd categorytotags
+</pre></div>
 </div>
 <p>from the directory your <tt class="docutils literal"><span class="pre">config.py</span></tt> is in or:</p>
-<div class="highlight-python"><pre>pyblosxom-cmd categorytotags --config=/path/to/config/file</pre>
+<div class="highlight-python"><div class="highlight"><pre>pyblosxom-cmd categorytotags --config=/path/to/config/file
+</pre></div>
 </div>
 <p>from anywhere.</p>
 </div>
@@ -313,8 +320,8 @@ works or not.</p>
     </div>
     <div class="footer">
         &copy; Copyright Creative Commons CC0 - http://creativecommons.org/publicdomain/zero/1.0/.
-      Last updated on Jul 31, 2013.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2b1.
+      Last updated on Jul 25, 2014.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
     </div>
   </body>
 </html>

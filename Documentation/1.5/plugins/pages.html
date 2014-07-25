@@ -118,8 +118,9 @@ need a <tt class="docutils literal"><span class="pre">frontpage.txt</span></tt> 
 value as set in your <tt class="docutils literal"><span class="pre">config.py</span></tt> file.  For example, if your
 <tt class="docutils literal"><span class="pre">pages_trigger</span></tt> was <tt class="docutils literal"><span class="pre">pages</span></tt>, then it would look for urls like
 this:</p>
-<div class="highlight-python"><pre>/pages/blah
-/pages/blah.html</pre>
+<div class="highlight-python"><div class="highlight"><pre>/pages/blah
+/pages/blah.html
+</pre></div>
 </div>
 <p>and pulls up the file <tt class="docutils literal"><span class="pre">blah.txt</span></tt> <a class="footnote-reference" href="#id2" id="id1">[1]</a> which is located in the path
 specified in the config file as <tt class="docutils literal"><span class="pre">pagesdir</span></tt>.</p>
@@ -150,22 +151,24 @@ your <tt class="docutils literal"><span class="pre">pages</span></tt> template.<
 <tt class="docutils literal"><span class="pre">&lt;%</span></tt> and <tt class="docutils literal"><span class="pre">%&gt;</span></tt>.  The assumption is that only you can edit your
 pages files, so there are no restrictions (security or otherwise).</p>
 <p>For example:</p>
-<div class="highlight-python"><pre>&lt;%
-print "testing"
+<div class="highlight-python"><div class="highlight"><pre>&lt;%
+print &quot;testing&quot;
 %&gt;
 
 &lt;%
-x = { "apple": 5, "banana": 6, "pear": 4 }
+x = { &quot;apple&quot;: 5, &quot;banana&quot;: 6, &quot;pear&quot;: 4 }
 for mem in x.keys():
-   print "&lt;li&gt;%s - %s&lt;/li&gt;" % (mem, x[mem])
-%&gt;</pre>
+   print &quot;&lt;li&gt;%s - %s&lt;/li&gt;&quot; % (mem, x[mem])
+%&gt;
+</pre></div>
 </div>
 <p>The request object is available in python code blocks.  Reference it
 by <tt class="docutils literal"><span class="pre">request</span></tt>.  Example:</p>
-<div class="highlight-python"><pre>&lt;%
+<div class="highlight-python"><div class="highlight"><pre>&lt;%
 config = request.get_configuration()
-print "your datadir is: %s" % config["datadir"]
-%&gt;</pre>
+print &quot;your datadir is: %s&quot; % config[&quot;datadir&quot;]
+%&gt;
+</pre></div>
 </div>
 </div>
 <div class="section" id="license">
@@ -241,8 +244,8 @@ print "your datadir is: %s" % config["datadir"]
     </div>
     <div class="footer">
         &copy; Copyright Creative Commons CC0 - http://creativecommons.org/publicdomain/zero/1.0/.
-      Last updated on Jul 31, 2013.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2b1.
+      Last updated on Jul 25, 2014.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
     </div>
   </body>
 </html>

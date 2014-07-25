@@ -97,11 +97,12 @@ templates.</p>
 <p>A <a class="reference internal" href="glossary.html#term-template"><em class="xref std std-term">template</em></a> is one piece of a flavour that specifies a specific
 portion of the output.  For example, the head template of an html
 flavour would be in a file called <tt class="docutils literal"><span class="pre">head</span></tt> and might look like this:</p>
-<div class="highlight-python"><pre>&lt;html&gt;
+<div class="highlight-python"><div class="highlight"><pre>&lt;html&gt;
 &lt;head&gt;
    &lt;title&gt;$(blog_title)&lt;/title&gt;
 &lt;/head&gt;
-&lt;body&gt;</pre>
+&lt;body&gt;
+</pre></div>
 </div>
 <p>More on templates later.</p>
 <p>Pyblosxom allows you to manage the flavours and templates for your
@@ -131,7 +132,7 @@ you can store each flavour in a directory in the flavourdir.</p>
 </pre></div>
 </div>
 <p>Joe&#8217;s blog directory structure would look like this:</p>
-<div class="highlight-python"><pre>/home/joe/blog/
+<div class="highlight-python"><div class="highlight"><pre>/home/joe/blog/
           |- entries/             &lt;-- datadir
           |  |- work/             &lt;-- work category of entries
           |  |- home/             &lt;-- home category of entries
@@ -149,7 +150,8 @@ you can store each flavour in a directory in the flavourdir.</p>
              |  |- head
              |  |- foot
              |  |- story
-             |  |- ...</pre>
+             |  |- ...
+</pre></div>
 </div>
 <p>The <tt class="docutils literal"><span class="pre">flavourdir</span></tt> specifies the directory in which Joe stores his
 flavours.</p>
@@ -172,7 +174,7 @@ flavourdir except that the flavourdir is not a separate directory
 tree&#8212;it&#8217;s the same tree as your datadir.</p>
 <p>For example, Joe stores his flavours alongside his entries and his
 blog directory tree looks like this:</p>
-<div class="highlight-python"><pre>/home/joe/blog/
+<div class="highlight-python"><div class="highlight"><pre>/home/joe/blog/
           |- entries/             &lt;-- datadir
              |- html.flav/        &lt;-- html flavour
              |  |- content_type
@@ -185,7 +187,8 @@ blog directory tree looks like this:</p>
              |  |- html.flav/     &lt;-- html flavour for the work category
              |  |- ...
              |
-             |- home/             &lt;-- home category of entries</pre>
+             |- home/             &lt;-- home category of entries
+</pre></div>
 </div>
 <p>In this way your entries are intermixed with your flavour directories.</p>
 </div>
@@ -252,7 +255,7 @@ wants branded differently than the rest of his blog.  Joe uses the
 category <em>work</em> for all his plant work and has a different flavour for
 this category of his blog.</p>
 <p>Joe&#8217;s blog directory looks like this:</p>
-<div class="highlight-python"><pre>/home/joe/blog/
+<div class="highlight-python"><div class="highlight"><pre>/home/joe/blog/
           |- entries/             &lt;-- datadir
           |  |- work/             &lt;-- work category of entries
           |  |- home/             &lt;-- home category of entries
@@ -267,7 +270,8 @@ this category of his blog.</p>
              |
              |- work/
                 |- html.flav/     &lt;-- html flavour for the work category
-                |- ...</pre>
+                |- ...
+</pre></div>
 </div>
 <p>There is a <tt class="docutils literal"><span class="pre">work</span></tt> directory in his <tt class="docutils literal"><span class="pre">flavours</span></tt> directory that
 parallels the <tt class="docutils literal"><span class="pre">work</span></tt> directory in his <tt class="docutils literal"><span class="pre">entries</span></tt> directory.  In
@@ -276,7 +280,7 @@ root and home categories.</p>
 <p>You can override individual templates, too.</p>
 <p>For example, if you had a math category and wanted the story template
 to look different, you could set up your blog like this:</p>
-<div class="highlight-python"><pre>blog/
+<div class="highlight-python"><div class="highlight"><pre>blog/
   |- entries/
   |  |- math/             &lt;-- math category in datadir
   |
@@ -291,7 +295,8 @@ to look different, you could set up your blog like this:</p>
      |
      |- math/             &lt;-- math category in flavourdir
         |- html.flav/
-           |- story</pre>
+           |- story
+</pre></div>
 </div>
 <p>If the request is for an entry in the math category, then the <tt class="docutils literal"><span class="pre">story</span></tt>
 file will be taken from the <tt class="docutils literal"><span class="pre">flavours/math/html.flav/</span></tt> directory and
@@ -330,26 +335,31 @@ templates they&#8217;re available.</p>
 <h3>Variable syntax<a class="headerlink" href="#variable-syntax" title="Permalink to this headline">¶</a></h3>
 <p>To use a variable in a template, prefix the variable name with a $.
 For example, this would expand to the blog&#8217;s title as an h2:</p>
-<div class="highlight-python"><pre>&lt;h2&gt;$title&lt;/h2&gt;</pre>
+<div class="highlight-python"><div class="highlight"><pre>&lt;h2&gt;$title&lt;/h2&gt;
+</pre></div>
 </div>
 <p>To reduce ambiguity, use parenthesized variables.:</p>
-<div class="highlight-python"><pre>&lt;h2&gt;$(title)&lt;/h2&gt;</pre>
+<div class="highlight-python"><div class="highlight"><pre>&lt;h2&gt;$(title)&lt;/h2&gt;
+</pre></div>
 </div>
 <p>You can also use variables that expand into functions which
 are evaluated:</p>
-<div class="highlight-python"><pre>&lt;h2&gt;$(escape(title))&lt;/h2&gt;</pre>
+<div class="highlight-python"><div class="highlight"><pre>&lt;h2&gt;$(escape(title))&lt;/h2&gt;
+</pre></div>
 </div>
 </div>
 <div class="section" id="escaping-the">
 <h3>Escaping the $<a class="headerlink" href="#escaping-the" title="Permalink to this headline">¶</a></h3>
 <p>If you want a $ in your template that shouldn&#8217;t signify variable expansion,
 then you need to escape it with a <tt class="docutils literal"><span class="pre">\</span></tt>:</p>
-<div class="highlight-python"><pre>&lt;p&gt;
+<div class="highlight-python"><div class="highlight"><pre>&lt;p&gt;
    This blog is all about \$!
-&lt;/p&gt;</pre>
+&lt;/p&gt;
+</pre></div>
 </div>
 <p>renders as:</p>
-<div class="highlight-python"><pre>This blog is all about $!</pre>
+<div class="highlight-python"><div class="highlight"><pre>This blog is all about $!
+</pre></div>
 </div>
 </div>
 <div class="section" id="getting-a-complete-list-of-variables">
@@ -572,14 +582,15 @@ installed to see what variables are available and what they do.</p>
 <p>You can add metadata to your entries on an individual basis and this
 metadata is available to your story templates.</p>
 <p>For example, if I had a blog entry like this:</p>
-<div class="highlight-python"><pre>First Post!
+<div class="highlight-python"><div class="highlight"><pre>First Post!
 #mood happy
 #music The Doors - Break on Through to the Other Side
 &lt;p&gt;
-  This is the first post to my new Pyblosxom blog.  I've
+  This is the first post to my new Pyblosxom blog.  I&#39;ve
   also got two metadata items in it which will be available
   as variables!
-&lt;/p&gt;</pre>
+&lt;/p&gt;
+</pre></div>
 </div>
 <p>You&#8217;ll have two variables <tt class="docutils literal"><span class="pre">$mood</span></tt> and <tt class="docutils literal"><span class="pre">$music</span></tt> that will also be
 available in your story templates.</p>
@@ -621,11 +632,13 @@ in your <tt class="docutils literal"><span class="pre">config.py</span></tt> fil
 has used doesn&#8217;t specify which flavour to use.</p>
 <p>This url doesn&#8217;t specify the flavour to use, so it will be rendered
 with the default flavour:</p>
-<div class="highlight-python"><pre>http://example.com/cgi-bin/pyblosxom.cgi/2005/03</pre>
+<div class="highlight-python"><div class="highlight"><pre>http://example.com/cgi-bin/pyblosxom.cgi/2005/03
+</pre></div>
 </div>
 <p>This url specifies the flavour, so it will be rendered with that
 flavour:</p>
-<div class="highlight-python"><pre>http://example.com/cgi-bin/pyblosxom.cgi/2005/03/?flav=html</pre>
+<div class="highlight-python"><div class="highlight"><pre>http://example.com/cgi-bin/pyblosxom.cgi/2005/03/?flav=html
+</pre></div>
 </div>
 </div>
 <div class="section" id="order-of-operations-to-figure-out-which-flavour-to-use">
@@ -740,8 +753,8 @@ come with your Pyblosxom installation.</p>
     </div>
     <div class="footer">
         &copy; Copyright Creative Commons CC0 - http://creativecommons.org/publicdomain/zero/1.0/.
-      Last updated on Jul 31, 2013.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2b1.
+      Last updated on Jul 25, 2014.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
     </div>
   </body>
 </html>

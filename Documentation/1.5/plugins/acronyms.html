@@ -93,7 +93,7 @@ state it&#8217;s an acronym.</p>
 <div>&lt;acronym&gt; = explanation
 &lt;acronym&gt; = acronym|explanation</div></blockquote>
 <p>Examples:</p>
-<div class="highlight-python"><pre>ASCII = American Standard Code for Information Interchange
+<div class="highlight-python"><div class="highlight"><pre>ASCII = American Standard Code for Information Interchange
 CGI = Common Gateway Interface; Computer Generated Imagery
 CSS = Cascading Stylesheets
 HTML = Hypertext Markup Language
@@ -104,14 +104,17 @@ URL = Uniform Resource Locator
 URI = Uniform Resource Indicator
 WSGI = Web Server Gateway Interface
 XHTML = Extensible Hypertext Markup Language
-XML = Extensible Markup Language</pre>
+XML = Extensible Markup Language
+</pre></div>
 </div>
 <p>This one is explicitly labeled an acronym:</p>
-<div class="highlight-python"><pre>X.M.L. = acronym|Extensible Markup Language</pre>
+<div class="highlight-python"><div class="highlight"><pre>X.M.L. = acronym|Extensible Markup Language
+</pre></div>
 </div>
 <p>This one uses regular expression to match both <tt class="docutils literal"><span class="pre">UTF-8</span></tt> and
 <tt class="docutils literal"><span class="pre">UTF8</span></tt>:</p>
-<div class="highlight-python"><pre>UTF\-?8 = 8-bit UCS/Unicode Transformation Format</pre>
+<div class="highlight-python"><div class="highlight"><pre>UTF\-?8 = 8-bit UCS/Unicode Transformation Format
+</pre></div>
 </div>
 <p>An abbreviation is a series of characters followed by a period.  If
 it&#8217;s not followed by a period, then you need to explicitly state that
@@ -120,7 +123,8 @@ it&#8217;s an abbreviation.</p>
 <div>&lt;abbreviation&gt; = explanation
 &lt;abbreviation&gt; = abbr|explanation</div></blockquote>
 <p>Examples:</p>
-<div class="highlight-python"><pre>dr. = doctor</pre>
+<div class="highlight-python"><div class="highlight"><pre>dr. = doctor
+</pre></div>
 </div>
 <p>This one is explicitly labeled an abbreviation:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="n">dr</span> <span class="o">=</span> <span class="n">abbr</span><span class="o">|</span><span class="n">doctor</span>
@@ -147,7 +151,7 @@ this to the metadata for the entry:</p>
 <div class="section" id="styling">
 <h2>Styling<a class="headerlink" href="#styling" title="Permalink to this headline">¶</a></h2>
 <p>You might want to add something like this to your CSS:</p>
-<div class="highlight-python"><pre>acronym {
+<div class="highlight-python"><div class="highlight"><pre>acronym {
     bordor-bottom: 1px dashed #aaa;
     cursor: help;
 }
@@ -155,7 +159,8 @@ this to the metadata for the entry:</p>
 abbr {
     bordor-bottom: 1px dashed #aaa;
     cursor: help;
-}</pre>
+}
+</pre></div>
 </div>
 </div>
 <div class="section" id="origins">
@@ -237,8 +242,8 @@ abbr {
     </div>
     <div class="footer">
         &copy; Copyright Creative Commons CC0 - http://creativecommons.org/publicdomain/zero/1.0/.
-      Last updated on Jul 31, 2013.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2b1.
+      Last updated on Jul 25, 2014.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
     </div>
   </body>
 </html>

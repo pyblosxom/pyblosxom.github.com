@@ -298,10 +298,30 @@ Pyblosxom allows users to test their configuration and installation from
 the console.</p>
 <p>You can test using either the <tt class="docutils literal"><span class="pre">pyblosxom.cgi</span></tt>
 script or the <tt class="docutils literal"><span class="pre">pyblosxom-cmd</span></tt> script:</p>
-<div class="highlight-python"><pre>% ./pyblosxom.cgi test</pre>
+<div class="highlight-python"><div class="highlight"><pre>% ./pyblosxom.cgi test
+</pre></div>
 </div>
 <p>or:</p>
-<div class="highlight-python"><pre>$ ./pyblcmd_dev.sh test --config ./newblog/
+<div class="highlight-python"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20</pre></div></td><td class="code"><div class="highlight"><pre>$ ./pyblcmd_dev.sh test --config ./newblog/
 pyblosxom-cmd version 1.5 dev
 Adding ./newblog/ to sys.path....
 Trying to import the config module....
@@ -316,12 +336,13 @@ System Information
 Checking config.py file
 =======================
 - properties set: 21
-- datadir '/home/willg/projects/pyblosxom/testing/newblog/entries' exists.
+- datadir &#39;/home/willg/projects/pyblosxom/testing/newblog/entries&#39; exists.
 
 Checking plugin configuration
 =============================
-....</pre>
-</div>
+....
+</pre></div>
+</td></tr></table></div>
 <p>This goes through and verifies the properties in the <tt class="docutils literal"><span class="pre">config.py</span></tt>
 file as best as it can.  It also prints out diagnostic information
 which is useful when things don&#8217;t work.  It also loads and initializes
@@ -407,7 +428,7 @@ example:</p>
  9
 10
 11
-12</pre></div></td><td class="code"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">pyblosxom</span> <span class="kn">import</span> <span class="n">tools</span>
+12</pre></div></td><td class="code"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">Pyblosxom</span> <span class="kn">import</span> <span class="n">tools</span>
 
 <span class="k">def</span> <span class="nf">cb_prepare</span><span class="p">(</span><span class="n">args</span><span class="p">):</span>
     <span class="c"># ...</span>
@@ -688,9 +709,10 @@ handler, and command summary</li>
 the user&#8217;s <tt class="docutils literal"><span class="pre">config.py</span></tt> file.</p>
 </div>
 <p>Executing the command looks like this:</p>
-<div class="highlight-python"><pre>% pyblosxom-cmd printargs --config /path/to/config.py/dir a b c
+<div class="highlight-python"><div class="highlight"><pre>% pyblosxom-cmd printargs --config /path/to/config.py/dir a b c
 pyblosxom-cmd version 1.5
-a b c</pre>
+a b c
+</pre></div>
 </div>
 </div>
 </div>
@@ -772,8 +794,8 @@ a b c</pre>
     </div>
     <div class="footer">
         &copy; Copyright Creative Commons CC0 - http://creativecommons.org/publicdomain/zero/1.0/.
-      Last updated on Jul 31, 2013.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2b1.
+      Last updated on Jul 25, 2014.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
     </div>
   </body>
 </html>

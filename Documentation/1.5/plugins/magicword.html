@@ -85,9 +85,10 @@ trailing whitespace, even if you expect the user to enter capital
 letters.  Their input will be lowercased and stripped before it is
 compared to <tt class="docutils literal"><span class="pre">mw_answer</span></tt>.</p>
 <p>Here&#8217;s what you put in your <tt class="docutils literal"><span class="pre">comment-form</span></tt> file:</p>
-<div class="highlight-python"><pre>The Magic Word:&lt;br /&gt;
+<div class="highlight-python"><div class="highlight"><pre>The Magic Word:&lt;br /&gt;
 &lt;i&gt;$(mw_question)&lt;/i&gt;&lt;br /&gt;
-&lt;input maxlenth="32" name="magicword" size="50" type="text" /&gt;&lt;br /&gt;</pre>
+&lt;input maxlenth=&quot;32&quot; name=&quot;magicword&quot; size=&quot;50&quot; type=&quot;text&quot; /&gt;&lt;br /&gt;
+</pre></div>
 </div>
 <p>It&#8217;s important that the name of the input field is exactly &#8220;magicword&#8221;.</p>
 </div>
@@ -98,10 +99,11 @@ compared to <tt class="docutils literal"><span class="pre">mw_answer</span></tt>
 <p>If your <tt class="docutils literal"><span class="pre">config.py</span></tt> file is in your web directory, protect it from
 being seen by creating or modifying a <tt class="docutils literal"><span class="pre">.htaccess</span></tt> file in the
 directory where <tt class="docutils literal"><span class="pre">config.py</span></tt> lives with the following contents:</p>
-<div class="highlight-python"><pre>&lt;Files config.py&gt;
+<div class="highlight-python"><div class="highlight"><pre>&lt;Files config.py&gt;
 Order allow,deny
 deny from all
-&lt;/Files&gt;</pre>
+&lt;/Files&gt;
+</pre></div>
 </div>
 <p>This will prevent people from being able to view <tt class="docutils literal"><span class="pre">config.py</span></tt> by
 browsing to it.</p>
@@ -178,8 +180,8 @@ browsing to it.</p>
     </div>
     <div class="footer">
         &copy; Copyright Creative Commons CC0 - http://creativecommons.org/publicdomain/zero/1.0/.
-      Last updated on Jul 31, 2013.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2b1.
+      Last updated on Jul 25, 2014.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
     </div>
   </body>
 </html>

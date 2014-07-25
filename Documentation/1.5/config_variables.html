@@ -420,10 +420,11 @@ you would set <tt class="docutils literal"><span class="pre">default_flavour</sp
 <p>Doing this will cause Pyblosxom to use the &#8220;joy&#8221; flavour whenever
 URIs are requested that don&#8217;t specify the flavour.</p>
 <p>For example, the following will all use the &#8220;joy&#8221; flavour:</p>
-<div class="highlight-python"><pre>http://example.com/blog/
+<div class="highlight-python"><div class="highlight"><pre>http://example.com/blog/
 http://example.com/blog/index
 http://example.com/blog/movies/
-http://example.com/blog/movies/supermanreturns</pre>
+http://example.com/blog/movies/supermanreturns
+</pre></div>
 </div>
 </dd></dl>
 
@@ -675,13 +676,14 @@ without the .py at the end).</p>
 </div>
 <p>in your <tt class="docutils literal"><span class="pre">config.py</span></tt> file and there were three plugins in
 <tt class="docutils literal"><span class="pre">/home/joe/blog/plugins/</span></tt>:</p>
-<div class="highlight-python"><pre>/home/
+<div class="highlight-python"><div class="highlight"><pre>/home/
 +- joe/
    +- blog/
       +- plugins/
          +- plugin_a.py
          +- plugin_b.py
-         +- plugin_c.py</pre>
+         +- plugin_c.py
+</pre></div>
 </div>
 <p>then Pyblosxom would load all three plugins in alphabetical order
 by filename: <tt class="docutils literal"><span class="pre">plugin_a</span></tt>, then <tt class="docutils literal"><span class="pre">plugin_b</span></tt>, then <tt class="docutils literal"><span class="pre">plugin_c</span></tt>.</p>
@@ -830,8 +832,8 @@ need to set some additional configuration variables in your
     </div>
     <div class="footer">
         &copy; Copyright Creative Commons CC0 - http://creativecommons.org/publicdomain/zero/1.0/.
-      Last updated on Jul 31, 2013.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2b1.
+      Last updated on Jul 25, 2014.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
     </div>
   </body>
 </html>

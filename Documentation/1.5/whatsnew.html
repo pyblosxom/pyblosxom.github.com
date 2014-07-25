@@ -101,11 +101,12 @@ package.</p>
 Pyblosxom and is now located in <tt class="docutils literal"><span class="pre">Pyblosxom/plugins/pycalendar.py</span></tt> in
 git repository. Thus the module name is <tt class="docutils literal"><span class="pre">Pyblosxom.plugins.pycalendar</span></tt>.
 Your <tt class="docutils literal"><span class="pre">config.py</span></tt> file would look have this:</p>
-<div class="highlight-python"><pre>py["load_plugins"] = [
+<div class="highlight-python"><div class="highlight"><pre>py[&quot;load_plugins&quot;] = [
     ...
-    "Pyblosxom.plugins.pycalendar",
+    &quot;Pyblosxom.plugins.pycalendar&quot;,
     ...
-    ]</pre>
+    ]
+</pre></div>
 </div>
 <p>To switch from having core plugins in your <tt class="docutils literal"><span class="pre">plugin_dirs</span></tt> directories to
 using the ones that come with Pyblosxom, all you need to do is:</p>
@@ -113,18 +114,20 @@ using the ones that come with Pyblosxom, all you need to do is:</p>
 <li><p class="first">change the entries for plugins that are core plugins that come with
 Pyblosxom that are listed in the <tt class="docutils literal"><span class="pre">load_plugins</span></tt> list in your
 <tt class="docutils literal"><span class="pre">config.py</span></tt> from something like this:</p>
-<div class="highlight-python"><pre>py["load_plugins"] = [
+<div class="highlight-python"><div class="highlight"><pre>py[&quot;load_plugins&quot;] = [
     ...
-    "pycalendar",
+    &quot;pycalendar&quot;,
     ...
-    ]</pre>
+    ]
+</pre></div>
 </div>
 <p>to something like this:</p>
-<div class="highlight-python"><pre>py["load_plugins"] = [
+<div class="highlight-python"><div class="highlight"><pre>py[&quot;load_plugins&quot;] = [
     ...
-    "Pyblosxom.plugins.pycalendar",
+    &quot;Pyblosxom.plugins.pycalendar&quot;,
     ...
-    ]</pre>
+    ]
+</pre></div>
 </div>
 </li>
 <li><p class="first">test to make sure your blog still works</p>
@@ -282,11 +285,13 @@ it into a stub.  This will reduce the need for you to update your
 <li><p class="first">pyblosxom-cmd now has an option to create the blog directory
 structure and skeleton files for you.  This makes it much faster to
 get a new blog up and running.  Syntax is this:</p>
-<div class="highlight-python"><pre>pyblosxom-cmd create &lt;path&gt;</pre>
+<div class="highlight-python"><div class="highlight"><pre>pyblosxom-cmd create &lt;path&gt;
+</pre></div>
 </div>
 <p>Some examples:</p>
-<div class="highlight-python"><pre>pyblosxom-cmd create .
-pyblosxom-cmd create /home/joe/blog</pre>
+<div class="highlight-python"><div class="highlight"><pre>pyblosxom-cmd create .
+pyblosxom-cmd create /home/joe/blog
+</pre></div>
 </div>
 </li>
 <li><p class="first">Template variable syntax <tt class="docutils literal"><span class="pre">$id_escaped</span></tt> and <tt class="docutils literal"><span class="pre">$id_urlencoded</span></tt> has
@@ -300,10 +305,12 @@ Do <tt class="docutils literal"><span class="pre">pyblosxom-cmd</span> <span cla
 </li>
 <li><p class="first">Removed <tt class="docutils literal"><span class="pre">blog_title_with_path</span></tt> variable.  If you were using this
 variable in your templates, replace it.  i.e. instead of:</p>
-<div class="highlight-python"><pre>$blog_title_with_path</pre>
+<div class="highlight-python"><div class="highlight"><pre>$blog_title_with_path
+</pre></div>
 </div>
 <p>do:</p>
-<div class="highlight-python"><pre>$blog_title : $pi_bl</pre>
+<div class="highlight-python"><div class="highlight"><pre>$blog_title : $pi_bl
+</pre></div>
 </div>
 </li>
 <li><p class="first">Re-worked PyBlosxom so that it uses the same encoding throughout.
@@ -318,9 +325,10 @@ lot easier to read and use now.  Thank you to the Sphinx team!</p>
 </li>
 <li><p class="first">Reworked the command line for static rendering.  It now works like
 this:</p>
-<div class="highlight-python"><pre>pyblosxom-cmd staticrender \
+<div class="highlight-python"><div class="highlight"><pre>pyblosxom-cmd staticrender \
               [--config &lt;path/to/config/file&gt;] \
-              [--incremenal]</pre>
+              [--incremenal]
+</pre></div>
 </div>
 <p>If the <tt class="docutils literal"><span class="pre">config.py</span></tt> file is in your <tt class="docutils literal"><span class="pre">PYTHONPATH</span></tt>, then you can
 skip the <tt class="docutils literal"><span class="pre">--config</span> <span class="pre">&lt;path/to/config/file&gt;</span></tt> stuff.</p>
@@ -359,13 +367,14 @@ causes the front page <tt class="docutils literal"><span class="pre">num_entries
 </li>
 <li><p class="first">Templates in a flavourdir directory no longer require the flavour
 as the file extension.  e.g. This will work fine:</p>
-<div class="highlight-python"><pre>blog/
+<div class="highlight-python"><div class="highlight"><pre>blog/
  |- flavourdir/
      |- html.flav/
          |- content_type
          |- head
          |- story
-         |- ...</pre>
+         |- ...
+</pre></div>
 </div>
 </li>
 <li><p class="first">We moved the main PyBlosxom site to
@@ -445,7 +454,8 @@ during rendering.</p>
 </li>
 <li><p class="first">Added a lot of tests and rewrote everything to ditch the nose
 requirement.  Tests can be run with:</p>
-<div class="highlight-python"><pre>python setup.py test</pre>
+<div class="highlight-python"><div class="highlight"><pre>python setup.py test
+</pre></div>
 </div>
 </li>
 <li><p class="first">Added a lot of documentation.</p>
@@ -603,8 +613,8 @@ behavior.</p>
     </div>
     <div class="footer">
         &copy; Copyright Creative Commons CC0 - http://creativecommons.org/publicdomain/zero/1.0/.
-      Last updated on Jul 31, 2013.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2b1.
+      Last updated on Jul 25, 2014.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
     </div>
   </body>
 </html>

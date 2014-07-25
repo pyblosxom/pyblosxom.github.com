@@ -113,7 +113,8 @@ server that you&#8217;re using.</p>
 read by the process executing your CGI script.</p>
 </li>
 <li><p class="first">Run your <tt class="docutils literal"><span class="pre">pyblosxom.cgi</span></tt> script by doing:</p>
-<div class="highlight-python"><pre>% ./pyblosxom.cgi test</pre>
+<div class="highlight-python"><div class="highlight"><pre>% ./pyblosxom.cgi test
+</pre></div>
 </div>
 <p>If that doesn&#8217;t work, double-check to make sure you&#8217;ve completed
 the above steps, then check the trouble-shooting section below,
@@ -249,9 +250,10 @@ a long way in helping us to help you.</p>
 <tt class="docutils literal"><span class="pre">pyblosxom.cgi</span></tt>.</p>
 <p>For a typical user on an Apache installation with user folders turned
 on, Pyblosxom URLs could look like this:</p>
-<div class="highlight-python"><pre>http://example.com/~joe/cgi-bin/pyblosxom.cgi
+<div class="highlight-python"><div class="highlight"><pre>http://example.com/~joe/cgi-bin/pyblosxom.cgi
 http://example.com/~joe/cgi-bin/pyblosxom.cgi/an_entry.html
-http://example.com/~joe/cgi-bin/pyblosxom.cgi/dev/another_entry.html</pre>
+http://example.com/~joe/cgi-bin/pyblosxom.cgi/dev/another_entry.html
+</pre></div>
 </div>
 <p>That gets pretty long and it&#8217;s not very good looking.  For example,
 telling the URL to your mother or best friend over the phone would be
@@ -269,9 +271,10 @@ script.</li>
 <p>There&#8217;s no reason that <tt class="docutils literal"><span class="pre">pyblosxom.cgi</span></tt> has to be named
 <tt class="docutils literal"><span class="pre">pyblosxom.cgi</span></tt>.  Let&#8217;s try changing it <tt class="docutils literal"><span class="pre">blog</span></tt>.  Now our example
 URLs look like this:</p>
-<div class="highlight-python"><pre>http://example.com/~joe/cgi-bin/blog
+<div class="highlight-python"><div class="highlight"><pre>http://example.com/~joe/cgi-bin/blog
 http://example.com/~joe/cgi-bin/blog/an_entry.html
-http://example.com/~joe/cgi-bin/blog/category1/another_entry.html</pre>
+http://example.com/~joe/cgi-bin/blog/category1/another_entry.html
+</pre></div>
 </div>
 <p>That&#8217;s better looking in the example.  In your specific circumstances,
 that may be all you need.</p>
@@ -285,20 +288,21 @@ that may be all you need.</p>
 is a CGI script even if it doesn&#8217;t have a <tt class="docutils literal"><span class="pre">.cgi</span></tt> at the end of it.
 If you can use <tt class="docutils literal"><span class="pre">.htaccess</span></tt> files to override Apache settings, you
 might be able to do something like this:</p>
-<div class="highlight-python"><pre># this allows execution of CGI scripts in this directory
+<div class="highlight-python"><div class="highlight"><pre># this allows execution of CGI scripts in this directory
 Options ExecCGI
 
-# if the user doesn't specify a file, then instead of doing the
-# regular directory listing, we look at "blog" (which is our
+# if the user doesn&#39;t specify a file, then instead of doing the
+# regular directory listing, we look at &quot;blog&quot; (which is our
 # pyblosxom.cgi script renamed)
 DirectoryIndex blog
 
-# this tells Apache that even though "blog" doesn't end in .cgi,
+# this tells Apache that even though &quot;blog&quot; doesn&#39;t end in .cgi,
 # it is in fact a CGI script and should be treated as such
 &lt;Files blog&gt;
 ForceType application/cgi-script
 SetHandler cgi-script
-&lt;/Files&gt;</pre>
+&lt;/Files&gt;
+</pre></div>
 </div>
 <p>You may need to stop and restart Apache for your Apache changes to
 take effect.</p>
@@ -312,15 +316,17 @@ for more details.</p>
 <p>In our case, we want all incoming URLs pointing to <tt class="docutils literal"><span class="pre">blog</span></tt> to get
 rewritten to <tt class="docutils literal"><span class="pre">cgi-bin/pyblosxom.cgi</span></tt> so they can be handled by
 Pyblosxom.  Then all our URLs will look like this:</p>
-<div class="highlight-python"><pre>http://example.com/~joe/blog
+<div class="highlight-python"><div class="highlight"><pre>http://example.com/~joe/blog
 http://example.com/~joe/blog/an_entry.html
-http://example.com/~joe/blog/category1/another_entry.html</pre>
+http://example.com/~joe/blog/category1/another_entry.html
+</pre></div>
 </div>
 <p>To do this, we create an .htaccess file (it has to be named exactly
 that) in our <tt class="docutils literal"><span class="pre">public_html</span></tt> directory (or wherever it is that
 <tt class="docutils literal"><span class="pre">/~joe/</span></tt> points to).  In that file we have the following code:</p>
-<div class="highlight-python"><pre>RewriteEngine on
-RewriteRule   ^blog?(.*)$   /~joe/cgi-bin/pyblosxom.cgi$1   [last]</pre>
+<div class="highlight-python"><div class="highlight"><pre>RewriteEngine on
+RewriteRule   ^blog?(.*)$   /~joe/cgi-bin/pyblosxom.cgi$1   [last]
+</pre></div>
 </div>
 <p>The first line turns on the Apache mod_rewrite engine so that it will
 rewrite URLs.</p>
@@ -418,8 +424,8 @@ in the Apache documentation for the version that you&#8217;re using.</p>
     </div>
     <div class="footer">
         &copy; Copyright Creative Commons CC0 - http://creativecommons.org/publicdomain/zero/1.0/.
-      Last updated on Jul 31, 2013.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2b1.
+      Last updated on Jul 25, 2014.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
     </div>
   </body>
 </html>

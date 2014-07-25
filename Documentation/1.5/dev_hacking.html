@@ -83,14 +83,16 @@ development utilities</li>
 <ol class="arabic">
 <li><p class="first">Create a virtual environment for Pyblosxom into a directory of your
 choosing as denoted by <tt class="docutils literal"><span class="pre">&lt;VIRTUAL-ENV-DIR&gt;</span></tt>:</p>
-<div class="highlight-python"><pre>virtualenv &lt;VIRTUAL-ENV-DIR&gt;</pre>
+<div class="highlight-python"><div class="highlight"><pre>virtualenv &lt;VIRTUAL-ENV-DIR&gt;
+</pre></div>
 </div>
 <p>This is the virtual environment that Pyblosxom will run in.  If you
 decide to delete Pyblosxom at some point, you can just remove this
 virtual environment directory.</p>
 </li>
 <li><p class="first">Activate the virtual environment:</p>
-<div class="highlight-python"><pre>source &lt;VIRTUAL-ENV-DIR&gt;/bin/activate</pre>
+<div class="highlight-python"><div class="highlight"><pre>source &lt;VIRTUAL-ENV-DIR&gt;/bin/activate
+</pre></div>
 </div>
 <p>Remember to activate the virtual environment <strong>every</strong> time you do
 something with Pyblosxom.</p>
@@ -99,11 +101,13 @@ you want to use the <tt class="docutils literal"><span class="pre">python</span>
 directory of your virtual environment&#8211;not the system one.</p>
 </li>
 <li><p class="first">Using git, clone the Pyblosxom repository:</p>
-<div class="highlight-python"><pre>git clone https://github.com/pyblosxom/pyblosxom.git</pre>
+<div class="highlight-python"><div class="highlight"><pre>git clone https://github.com/pyblosxom/pyblosxom.git
+</pre></div>
 </div>
 </li>
 <li><p class="first">Change directories into the <tt class="docutils literal"><span class="pre">pyblosxom</span></tt> directory and run:</p>
-<div class="highlight-python"><pre>python setup.py develop</pre>
+<div class="highlight-python"><div class="highlight"><pre>python setup.py develop
+</pre></div>
 </div>
 </li>
 </ol>
@@ -114,11 +118,13 @@ directory of your virtual environment&#8211;not the system one.</p>
 environment, you will:</p>
 <ol class="arabic">
 <li><p class="first">Make sure the virtual environment is activated and if it isn&#8217;t do:</p>
-<div class="highlight-python"><pre>source &lt;VIRTUAL-ENV-DIR&gt;/bin/activate</pre>
+<div class="highlight-python"><div class="highlight"><pre>source &lt;VIRTUAL-ENV-DIR&gt;/bin/activate
+</pre></div>
 </div>
 </li>
 <li><p class="first">Change directories into where you have your blog and do:</p>
-<div class="highlight-python"><pre>paster serve blog.ini</pre>
+<div class="highlight-python"><div class="highlight"><pre>paster serve blog.ini
+</pre></div>
 </div>
 </li>
 </ol>
@@ -129,9 +135,10 @@ To ensure Paster is installed in your virtualenv, make sure it
 is activated (see step 1) and then use pip to install paste.</p>
 <p>Note 2: Due to a bug in some linux distributions, it is recommended
 to install paste in the following three steps:</p>
-<div class="highlight-python"><pre>pip install paste
+<div class="highlight-python"><div class="highlight"><pre>pip install paste
 pip install pastedeploy
-pip install pastescript</pre>
+pip install pastescript
+</pre></div>
 </div>
 </div>
 <div class="section" id="updating-pyblosxom">
@@ -143,7 +150,7 @@ environment&#8212;you don&#8217;t need to re-run <tt class="docutils literal"><s
 <div class="section" id="where-to-go-from-here">
 <h2>Where to go from here<a class="headerlink" href="#where-to-go-from-here" title="Permalink to this headline">¶</a></h2>
 <p>Once set up, you can continue to the
-<a class="reference external" href="http://pyblosxom.github.com/1.5/install.html#creating-a-blog">Creating your blog</a>. chapter</p>
+<a class="reference external" href="http://pyblosxom.github.io/Documentation/1.5/install.html#creating-a-blog">Creating your blog</a>. chapter</p>
 </div>
 </div>
 
@@ -213,8 +220,8 @@ environment&#8212;you don&#8217;t need to re-run <tt class="docutils literal"><s
     </div>
     <div class="footer">
         &copy; Copyright Creative Commons CC0 - http://creativecommons.org/publicdomain/zero/1.0/.
-      Last updated on Jul 31, 2013.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2b1.
+      Last updated on Jul 25, 2014.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
     </div>
   </body>
 </html>

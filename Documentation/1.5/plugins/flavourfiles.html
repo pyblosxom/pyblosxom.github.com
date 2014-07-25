@@ -66,7 +66,8 @@ this is difficult to walk a user through.</p>
 <p>It handles urls that start with <tt class="docutils literal"><span class="pre">flavourfiles/</span></tt>, then the flavour
 name, then the path to the file.</p>
 <p>For example:</p>
-<div class="highlight-python"><pre>http://example.com/blog/flavourfiles/html/style.css</pre>
+<div class="highlight-python"><div class="highlight"><pre>http://example.com/blog/flavourfiles/html/style.css
+</pre></div>
 </div>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
@@ -82,10 +83,12 @@ probably has bugs, and hasn&#8217;t been well tested!</p>
 of your <tt class="docutils literal"><span class="pre">config.py</span></tt> file.</p>
 </li>
 <li><p class="first">In templates you want to use flavourfiles, use urls like this:</p>
-<div class="highlight-python"><pre>$(base_url)/flavourfiles/$(flavour)/path-to-file</pre>
+<div class="highlight-python"><div class="highlight"><pre>$(base_url)/flavourfiles/$(flavour)/path-to-file
+</pre></div>
 </div>
 <p>For example:</p>
-<div class="highlight-python"><pre>&lt;img src="$(base_url)/flavourfiles/$(flavour)/header_image.jpg"&gt;</pre>
+<div class="highlight-python"><div class="highlight"><pre>&lt;img src=&quot;$(base_url)/flavourfiles/$(flavour)/header_image.jpg&quot;&gt;
+</pre></div>
 </div>
 </li>
 </ol>
@@ -164,8 +167,8 @@ the templates.</p>
     </div>
     <div class="footer">
         &copy; Copyright Creative Commons CC0 - http://creativecommons.org/publicdomain/zero/1.0/.
-      Last updated on Jul 31, 2013.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2b1.
+      Last updated on Jul 25, 2014.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
     </div>
   </body>
 </html>

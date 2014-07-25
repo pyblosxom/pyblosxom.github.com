@@ -78,14 +78,15 @@ in your <tt class="docutils literal"><span class="pre">config.py</span></tt> fil
 summary page for that year.  The summary is generated using the
 <tt class="docutils literal"><span class="pre">yearsummarystory</span></tt> template for each month in the year.</p>
 <p>My <tt class="docutils literal"><span class="pre">yearsummarystory</span></tt> template looks like this:</p>
-<div class="highlight-python"><pre>&lt;div class="blosxomEntry"&gt;
-&lt;span class="blosxomTitle"&gt;$title&lt;/span&gt;
-&lt;div class="blosxomBody"&gt;
+<div class="highlight-python"><div class="highlight"><pre>&lt;div class=&quot;blosxomEntry&quot;&gt;
+&lt;span class=&quot;blosxomTitle&quot;&gt;$title&lt;/span&gt;
+&lt;div class=&quot;blosxomBody&quot;&gt;
 &lt;table&gt;
 $body
 &lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;</pre>
+&lt;/div&gt;
+</pre></div>
 </div>
 <p>The <tt class="docutils literal"><span class="pre">$(archivelinks)</span></tt> link can be configured with the
 <tt class="docutils literal"><span class="pre">archive_template</span></tt> config variable.  It uses the Python string
@@ -97,9 +98,10 @@ formatting syntax.</p>
 </pre></div>
 </div>
 <p>The vars available with typical example values are:</p>
-<div class="highlight-python"><pre>Y      4-digit year   ex: '1978'
-y      2-digit year   ex: '78'
-f      the flavour    ex: 'html'</pre>
+<div class="highlight-python"><div class="highlight"><pre>Y      4-digit year   ex: &#39;1978&#39;
+y      2-digit year   ex: &#39;78&#39;
+f      the flavour    ex: &#39;html&#39;
+</pre></div>
 </div>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
@@ -178,8 +180,8 @@ string formatting rules&#8211;not Pyblosxom template rules!</p>
     </div>
     <div class="footer">
         &copy; Copyright Creative Commons CC0 - http://creativecommons.org/publicdomain/zero/1.0/.
-      Last updated on Jul 31, 2013.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2b1.
+      Last updated on Jul 25, 2014.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
     </div>
   </body>
 </html>

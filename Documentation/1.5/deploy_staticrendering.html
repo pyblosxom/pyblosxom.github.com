@@ -152,14 +152,17 @@ because of new blog entries or updated blog entries (see
 <span id="id1"></span><h3>Render everything<a class="headerlink" href="#render-everything" title="Permalink to this headline">¶</a></h3>
 <p>To render all pages in your blog, <tt class="docutils literal"><span class="pre">cd</span></tt> into the directory that
 contains your <tt class="docutils literal"><span class="pre">config.py</span></tt> file and run:</p>
-<div class="highlight-python"><pre>% pyblosxom-cmd staticrender</pre>
+<div class="highlight-python"><div class="highlight"><pre>% pyblosxom-cmd staticrender
+</pre></div>
 </div>
 <p>Or from any directory run:</p>
-<div class="highlight-python"><pre>% pyblosxom-cmd staticrender --config &lt;/path/to/blog_dir&gt;</pre>
+<div class="highlight-python"><div class="highlight"><pre>% pyblosxom-cmd staticrender --config &lt;/path/to/blog_dir&gt;
+</pre></div>
 </div>
 <p>where <tt class="docutils literal"><span class="pre">&lt;/path/to/blog_dir&gt;</span></tt> is replaced by the path of the directory
 that contains your <tt class="docutils literal"><span class="pre">config.py</span></tt> file.  For example:</p>
-<div class="highlight-python"><pre>% pyblosxom-cmd staticrender --config /home/joe/blog/</pre>
+<div class="highlight-python"><div class="highlight"><pre>% pyblosxom-cmd staticrender --config /home/joe/blog/
+</pre></div>
 </div>
 <p>Or, if the location of your <tt class="docutils literal"><span class="pre">config.py</span></tt> file is in your
 <tt class="docutils literal"><span class="pre">PYTHONPATH</span></tt> (an environment variable) then you can run
@@ -223,7 +226,7 @@ those files over separately&#8212;Pyblosxom won&#8217;t do it for you.</li>
 <p>My blog consists of blog entries and also a CSS file, a JavaScript
 file, and a bunch of images.</p>
 <p>My directory layout looks like:</p>
-<div class="highlight-python"><pre>blog/
+<div class="highlight-python"><div class="highlight"><pre>blog/
   |- www/
   |  |- images/
   |  |- css/
@@ -234,7 +237,8 @@ file, and a bunch of images.</p>
   |- plugins/       # a couple of plugins I use
   |
   |- config.py      # my config.py file
-  \- compile.sh     # shell script below</pre>
+  \- compile.sh     # shell script below
+</pre></div>
 </div>
 <p>I render my blog to <tt class="docutils literal"><span class="pre">/home/joe/public_html</span></tt>.</p>
 <p>I like having my blog updated nightly&#8212;that gives me time to write
@@ -328,8 +332,8 @@ cp -ar <span class="k">${</span><span class="nv">BLOGDIR</span><span class="k">}
     </div>
     <div class="footer">
         &copy; Copyright Creative Commons CC0 - http://creativecommons.org/publicdomain/zero/1.0/.
-      Last updated on Jul 31, 2013.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2b1.
+      Last updated on Jul 25, 2014.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
     </div>
   </body>
 </html>

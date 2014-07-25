@@ -76,7 +76,7 @@ setup and default handlers are defined here.</p>
 <dl class="class">
 <dt id="Pyblosxom.pyblosxom.EnvDict">
 <em class="property">class </em><tt class="descclassname">Pyblosxom.pyblosxom.</tt><tt class="descname">EnvDict</tt><big>(</big><em>request</em>, <em>env</em><big>)</big><a class="headerlink" href="#Pyblosxom.pyblosxom.EnvDict" title="Permalink to this definition">¶</a></dt>
-<dd><p>Wrapper arround a dict to provide a backwards compatible way to
+<dd><p>Wrapper around a dict to provide a backwards compatible way to
 get the <tt class="docutils literal"><span class="pre">form</span></tt> with syntax as:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="n">request</span><span class="o">.</span><span class="n">get_http</span><span class="p">()[</span><span class="s">&#39;form&#39;</span><span class="p">]</span>
 </pre></div>
@@ -288,9 +288,9 @@ http dict with the new values.</p>
 <dt id="Pyblosxom.pyblosxom.Request.buffer_input_stream">
 <tt class="descname">buffer_input_stream</tt><big>(</big><big>)</big><a class="headerlink" href="#Pyblosxom.pyblosxom.Request.buffer_input_stream" title="Permalink to this definition">¶</a></dt>
 <dd><p>Buffer the input stream in a StringIO instance.  This is done
-to have a known/consistent way of accessing incomming data.
+to have a known/consistent way of accessing incoming data.
 For example the input stream passed by mod_python does not
-offer the same functionallity as <tt class="docutils literal"><span class="pre">sys.stdin</span></tt>.</p>
+offer the same functionality as <tt class="docutils literal"><span class="pre">sys.stdin</span></tt>.</p>
 </dd></dl>
 
 <dl class="method">
@@ -404,9 +404,10 @@ It also provides methods for managing http headers.</p>
 <tt class="descname">add_header</tt><big>(</big><em>key</em>, <em>value</em><big>)</big><a class="headerlink" href="#Pyblosxom.pyblosxom.Response.add_header" title="Permalink to this definition">¶</a></dt>
 <dd><p>Populates the HTTP header with lines of text.  Sets the
 status code on this response object if the given argument list
-containes a &#8216;Status&#8217; header.</p>
+contains a &#8216;Status&#8217; header.</p>
 <p>Example:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">resp</span><span class="o">.</span><span class="n">add_header</span><span class="p">(</span><span class="s">&quot;Content-type&quot;</span><span class="p">,</span> <span class="s">&quot;text/plain&quot;</span><span class="p">)</span>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">resp</span> <span class="o">=</span> <span class="n">Response</span><span class="p">(</span><span class="s">&#39;some fake request&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">resp</span><span class="o">.</span><span class="n">add_header</span><span class="p">(</span><span class="s">&quot;Content-type&quot;</span><span class="p">,</span> <span class="s">&quot;text/plain&quot;</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">resp</span><span class="o">.</span><span class="n">add_header</span><span class="p">(</span><span class="s">&quot;Content-Length&quot;</span><span class="p">,</span> <span class="s">&quot;10500&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -497,7 +498,8 @@ separates headers from the body.</p>
 <dd><p>Sets the status code for this response.  The status should
 be a valid HTTP response status.</p>
 <p>Examples:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">resp</span><span class="o">.</span><span class="n">set_status</span><span class="p">(</span><span class="s">&quot;200 OK&quot;</span><span class="p">)</span>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">resp</span> <span class="o">=</span> <span class="n">Response</span><span class="p">(</span><span class="s">&#39;some fake request&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">resp</span><span class="o">.</span><span class="n">set_status</span><span class="p">(</span><span class="s">&quot;200 OK&quot;</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">resp</span><span class="o">.</span><span class="n">set_status</span><span class="p">(</span><span class="s">&quot;404 Not Found&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -511,135 +513,6 @@ be a valid HTTP response status.</p>
 </table>
 </dd></dl>
 
-</dd></dl>
-
-<dl class="function">
-<dt id="Pyblosxom.pyblosxom.blosxom_entry_parser">
-<tt class="descclassname">Pyblosxom.pyblosxom.</tt><tt class="descname">blosxom_entry_parser</tt><big>(</big><em>filename</em>, <em>request</em><big>)</big><a class="headerlink" href="#Pyblosxom.pyblosxom.blosxom_entry_parser" title="Permalink to this definition">¶</a></dt>
-<dd><p>Open up a <tt class="docutils literal"><span class="pre">.txt</span></tt> file and read its contents.  The first line
-becomes the title of the entry.  The other lines are the body of
-the entry.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>filename</strong> &#8211; a filename to extract data and metadata from</li>
-<li><strong>request</strong> &#8211; a standard request object</li>
-</ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">dict containing parsed data and meta data with the
-particular file (and plugin)</p>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
-<dt id="Pyblosxom.pyblosxom.blosxom_file_list_handler">
-<tt class="descclassname">Pyblosxom.pyblosxom.</tt><tt class="descname">blosxom_file_list_handler</tt><big>(</big><em>args</em><big>)</big><a class="headerlink" href="#Pyblosxom.pyblosxom.blosxom_file_list_handler" title="Permalink to this definition">¶</a></dt>
-<dd><p>This is the default handler for getting entries.  It takes the
-request object in and figures out which entries based on the
-default behavior that we want to show and generates a list of
-EntryBase subclass objects which it returns.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>args</strong> &#8211; dict containing the incoming Request object</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">the content we want to render</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
-<dt id="Pyblosxom.pyblosxom.blosxom_handler">
-<tt class="descclassname">Pyblosxom.pyblosxom.</tt><tt class="descname">blosxom_handler</tt><big>(</big><em>request</em><big>)</big><a class="headerlink" href="#Pyblosxom.pyblosxom.blosxom_handler" title="Permalink to this definition">¶</a></dt>
-<dd><p>This is the default blosxom handler.</p>
-<p>It calls the renderer callback to get a renderer.  If there is no
-renderer, it uses the blosxom renderer.</p>
-<p>It calls the pathinfo callback to process the path_info http
-variable.</p>
-<p>It calls the filelist callback to build a list of entries to
-display.</p>
-<p>It calls the prepare callback to do any additional preparation
-before rendering the entries.</p>
-<p>Then it tells the renderer to render the entries.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>request</strong> &#8211; the request object.</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
-<dt id="Pyblosxom.pyblosxom.blosxom_process_path_info">
-<tt class="descclassname">Pyblosxom.pyblosxom.</tt><tt class="descname">blosxom_process_path_info</tt><big>(</big><em>args</em><big>)</big><a class="headerlink" href="#Pyblosxom.pyblosxom.blosxom_process_path_info" title="Permalink to this definition">¶</a></dt>
-<dd><p>Process HTTP <tt class="docutils literal"><span class="pre">PATH_INFO</span></tt> for URI according to path
-specifications, fill in data dict accordingly.</p>
-<p>The paths specification looks like this:</p>
-<ul class="simple">
-<li><tt class="docutils literal"><span class="pre">/foo.html</span></tt> and <tt class="docutils literal"><span class="pre">/cat/foo.html</span></tt> - file foo.* in / and /cat</li>
-<li><tt class="docutils literal"><span class="pre">/cat</span></tt> - category</li>
-<li><tt class="docutils literal"><span class="pre">/2002</span></tt> - category</li>
-<li><tt class="docutils literal"><span class="pre">/2002</span></tt> - year</li>
-<li><tt class="docutils literal"><span class="pre">/2002/Feb</span></tt> and <tt class="docutils literal"><span class="pre">/2002/02</span></tt> - Year and Month</li>
-<li><tt class="docutils literal"><span class="pre">/cat/2002/Feb/31</span></tt> and <tt class="docutils literal"><span class="pre">/cat/2002/02/31</span></tt>- year and month day
-in category.</li>
-</ul>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>args</strong> &#8211; dict containing the incoming Request object</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
-<dt id="Pyblosxom.pyblosxom.blosxom_sort_list_handler">
-<tt class="descclassname">Pyblosxom.pyblosxom.</tt><tt class="descname">blosxom_sort_list_handler</tt><big>(</big><em>args</em><big>)</big><a class="headerlink" href="#Pyblosxom.pyblosxom.blosxom_sort_list_handler" title="Permalink to this definition">¶</a></dt>
-<dd><p>Sorts the list based on <tt class="docutils literal"><span class="pre">_mtime</span></tt> attribute such that
-most recently written entries are at the beginning of the list
-and oldest entries are at the end.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>args</strong> &#8211; args dict with <tt class="docutils literal"><span class="pre">request</span></tt> object and <tt class="docutils literal"><span class="pre">entry_list</span></tt>
-list of entries</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">the sorted <tt class="docutils literal"><span class="pre">entry_list</span></tt></td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
-<dt id="Pyblosxom.pyblosxom.blosxom_truncate_list_handler">
-<tt class="descclassname">Pyblosxom.pyblosxom.</tt><tt class="descname">blosxom_truncate_list_handler</tt><big>(</big><em>args</em><big>)</big><a class="headerlink" href="#Pyblosxom.pyblosxom.blosxom_truncate_list_handler" title="Permalink to this definition">¶</a></dt>
-<dd><p>If <tt class="docutils literal"><span class="pre">config[&quot;num_entries&quot;]</span></tt> is not 0 and <tt class="docutils literal"><span class="pre">data[&quot;truncate&quot;]</span></tt>
-is not 0, then this truncates <tt class="docutils literal"><span class="pre">args[&quot;entry_list&quot;]</span></tt> by
-<tt class="docutils literal"><span class="pre">config[&quot;num_entries&quot;]</span></tt>.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>args</strong> &#8211; args dict with <tt class="docutils literal"><span class="pre">request</span></tt> object and <tt class="docutils literal"><span class="pre">entry_list</span></tt>
-list of entries</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">the truncated <tt class="docutils literal"><span class="pre">entry_list</span></tt>.</td>
-</tr>
-</tbody>
-</table>
 </dd></dl>
 
 <dl class="function">
@@ -712,16 +585,18 @@ processing of the arguments</li>
 </ul>
 </li>
 </ol>
-<p>Also, for backwards compatability reasons, we convert things
+<p>Also, for backwards compatibility reasons, we convert things
 like:</p>
-<div class="highlight-python"><pre>$id_escaped
+<div class="highlight-python"><div class="highlight"><pre>$id_escaped
 $id_urlencoded
 $(id_escaped)
-$(id_urlencoded)</pre>
+$(id_urlencoded)
+</pre></div>
 </div>
 <p>to:</p>
-<div class="highlight-python"><pre>$escape(id)
-$urlencode(id)</pre>
+<div class="highlight-python"><div class="highlight"><pre>$escape(id)
+$urlencode(id)
+</pre></div>
 </div>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -777,10 +652,10 @@ $urlencode(id)</pre>
 <dt id="Pyblosxom.tools.addcr">
 <tt class="descclassname">Pyblosxom.tools.</tt><tt class="descname">addcr</tt><big>(</big><em>text</em><big>)</big><a class="headerlink" href="#Pyblosxom.tools.addcr" title="Permalink to this definition">¶</a></dt>
 <dd><p>Adds a cr if it needs one.</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">addrc</span><span class="p">(</span><span class="s">&quot;foo&quot;</span><span class="p">)</span>
-<span class="go">foo\n</span>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">addcr</span><span class="p">(</span><span class="s">&quot;foo&quot;</span><span class="p">)</span>
+<span class="go">&#39;foo\n&#39;</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">addcr</span><span class="p">(</span><span class="s">&quot;foo</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">)</span>
-<span class="go">foo\n</span>
+<span class="go">&#39;foo\n&#39;</span>
 </pre></div>
 </div>
 <table class="docutils field-list" frame="void" rules="none">
@@ -811,18 +686,18 @@ commas in strings correctly.</p>
  9
 10
 11
-12</pre></div></td><td class="code"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">tools</span><span class="o">.</span><span class="n">commasplit</span><span class="p">(</span><span class="bp">None</span><span class="p">)</span>
+12</pre></div></td><td class="code"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">commasplit</span><span class="p">(</span><span class="bp">None</span><span class="p">)</span>
 <span class="go">[]</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">tools</span><span class="o">.</span><span class="n">commasplit</span><span class="p">(</span><span class="s">&quot;&quot;</span><span class="p">)</span>
-<span class="go">[&quot;&quot;]</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">tools</span><span class="o">.</span><span class="n">commasplit</span><span class="p">(</span><span class="s">&quot;a&quot;</span><span class="p">)</span>
-<span class="go">[&quot;a&quot;]</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">tools</span><span class="o">.</span><span class="n">commasplit</span><span class="p">(</span><span class="s">&quot;a, b, c&quot;</span><span class="p">)</span>
-<span class="go">[&quot;a&quot;, &quot; b&quot;, &quot; c&quot;]</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">tools</span><span class="o">.</span><span class="n">commasplit</span><span class="p">(</span><span class="s">&quot;&#39;a&#39;, &#39;b, c&#39;&quot;</span><span class="p">)</span>
-<span class="go">[&quot;a&quot;, &quot; &#39;b, c&#39;&quot;]</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">tools</span><span class="o">.</span><span class="n">commasplit</span><span class="p">(</span><span class="s">&quot;&#39;a&#39;, &quot;</span><span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="s">&quot;&quot;</span><span class="p">)</span>
-<span class="go">[&quot;a&quot;, &quot; &quot;b, c&quot;&quot;]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">commasplit</span><span class="p">(</span><span class="s">&quot;&quot;</span><span class="p">)</span>
+<span class="go">[&#39;&#39;]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">commasplit</span><span class="p">(</span><span class="s">&quot;a&quot;</span><span class="p">)</span>
+<span class="go">[&#39;a&#39;]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">commasplit</span><span class="p">(</span><span class="s">&quot;a, b, c&quot;</span><span class="p">)</span>
+<span class="go">[&#39;a&#39;, &#39; b&#39;, &#39; c&#39;]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">commasplit</span><span class="p">(</span><span class="s">&quot;&#39;a&#39;, &#39;b, c&#39;&quot;</span><span class="p">)</span>
+<span class="go">[&quot;&#39;a&#39;&quot;, &quot; &#39;b, c&#39;&quot;]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">commasplit</span><span class="p">(</span><span class="s">&quot;&#39;a&#39;, </span><span class="se">\&quot;</span><span class="s">b, c</span><span class="se">\&quot;</span><span class="s">&quot;</span><span class="p">)</span>
+<span class="go">[&quot;&#39;a&#39;&quot;, &#39; &quot;b, c&quot;&#39;]</span>
 </pre></div>
 </td></tr></table></div>
 <table class="docutils field-list" frame="void" rules="none">
@@ -907,15 +782,13 @@ isn&#8217;t a directory</p>
 4
 5
 6
-7
-8</pre></div></td><td class="code"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">escape_text</span><span class="p">(</span><span class="bp">None</span><span class="p">)</span>
-<span class="go">None</span>
+7</pre></div></td><td class="code"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">escape_text</span><span class="p">(</span><span class="bp">None</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">escape_text</span><span class="p">(</span><span class="s">&quot;&quot;</span><span class="p">)</span>
-<span class="go">&quot;&quot;</span>
+<span class="go">&#39;&#39;</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">escape_text</span><span class="p">(</span><span class="s">&quot;a&#39;b&quot;</span><span class="p">)</span>
-<span class="go">&quot;a&amp;#x27;b&quot;</span>
+<span class="go">&#39;a&amp;#x27;b&#39;</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">escape_text</span><span class="p">(</span><span class="s">&#39;a&quot;b&#39;</span><span class="p">)</span>
-<span class="go">&quot;a&amp;quot;b&quot;</span>
+<span class="go">&#39;a&amp;quot;b&#39;</span>
 </pre></div>
 </td></tr></table></div>
 </dd></dl>
@@ -999,7 +872,7 @@ instance.</p>
 <dl class="function">
 <dt id="Pyblosxom.tools.get_logger">
 <tt class="descclassname">Pyblosxom.tools.</tt><tt class="descname">get_logger</tt><big>(</big><em>log_file=None</em><big>)</big><a class="headerlink" href="#Pyblosxom.tools.get_logger" title="Permalink to this definition">¶</a></dt>
-<dd><p>Creates and retuns a log channel.</p>
+<dd><p>Creates and returns a log channel.</p>
 <p>If no log_file is given the system-wide logfile as defined in
 config.py is used. If a log_file is given that&#8217;s where the created
 logger logs to.</p>
@@ -1021,14 +894,14 @@ log_file is stderr</td>
 
 <dl class="function">
 <dt id="Pyblosxom.tools.importname">
-<tt class="descclassname">Pyblosxom.tools.</tt><tt class="descname">importname</tt><big>(</big><em>modulename</em>, <em>name</em><big>)</big><a class="headerlink" href="#Pyblosxom.tools.importname" title="Permalink to this definition">¶</a></dt>
+<tt class="descclassname">Pyblosxom.tools.</tt><tt class="descname">importname</tt><big>(</big><em>module_name</em>, <em>name</em><big>)</big><a class="headerlink" href="#Pyblosxom.tools.importname" title="Permalink to this definition">¶</a></dt>
 <dd><p>Safely imports modules for runtime importing.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>modulename</strong> &#8211; the package name of the module to import from</li>
+<li><strong>module_name</strong> &#8211; the package name of the module to import from</li>
 <li><strong>name</strong> &#8211; the name of the module to import</li>
 </ul>
 </td>
@@ -1202,7 +1075,7 @@ filesystem.</p>
 
 <dl class="function">
 <dt id="Pyblosxom.tools.run_callback">
-<tt class="descclassname">Pyblosxom.tools.</tt><tt class="descname">run_callback</tt><big>(</big><em>chain</em>, <em>input</em>, <em>mappingfunc=&lt;function &lt;lambda&gt; at 0xaa8c8ec&gt;</em>, <em>donefunc=&lt;function &lt;lambda&gt; at 0xaa8c924&gt;</em>, <em>defaultfunc=None</em><big>)</big><a class="headerlink" href="#Pyblosxom.tools.run_callback" title="Permalink to this definition">¶</a></dt>
+<tt class="descclassname">Pyblosxom.tools.</tt><tt class="descname">run_callback</tt><big>(</big><em>chain</em>, <em>input</em>, <em>mappingfunc=&lt;function &lt;lambda&gt; at 0x240f500&gt;</em>, <em>donefunc=&lt;function &lt;lambda&gt; at 0x240f578&gt;</em>, <em>defaultfunc=None</em><big>)</big><a class="headerlink" href="#Pyblosxom.tools.run_callback" title="Permalink to this definition">¶</a></dt>
 <dd><p>Executes a callback chain on a given piece of data.  passed in is
 a dict of name/value pairs.  Consult the documentation for the
 specific callback chain you&#8217;re executing.</p>
@@ -1255,7 +1128,7 @@ with the latest version of the input dict.</li>
 <tt class="descclassname">Pyblosxom.tools.</tt><tt class="descname">update_static_entry</tt><big>(</big><em>cdict</em>, <em>entry_filename</em><big>)</big><a class="headerlink" href="#Pyblosxom.tools.update_static_entry" title="Permalink to this definition">¶</a></dt>
 <dd><p>This is a utility function that allows plugins to easily update
 statically rendered entries without going through all the
-rigamarole.</p>
+rigmarole.</p>
 <p>First we figure out whether this blog is set up for static
 rendering.  If not, then we return&#8211;no harm done.</p>
 <p>If we are, then we call <tt class="docutils literal"><span class="pre">render_url</span></tt> for each <tt class="docutils literal"><span class="pre">static_flavour</span></tt>
@@ -1281,25 +1154,23 @@ example: <tt class="docutils literal"><span class="pre">/movies/xmen2</span></tt
 <tt class="descclassname">Pyblosxom.tools.</tt><tt class="descname">urlencode_text</tt><big>(</big><em>s</em><big>)</big><a class="headerlink" href="#Pyblosxom.tools.urlencode_text" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calls <tt class="docutils literal"><span class="pre">urllib.quote</span></tt> on the string <tt class="docutils literal"><span class="pre">s</span></tt>.</p>
 <p>Note: if <tt class="docutils literal"><span class="pre">s</span></tt> is <tt class="docutils literal"><span class="pre">None</span></tt>, then we return <tt class="docutils literal"><span class="pre">None</span></tt>.</p>
-<div class="highlight-python"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10</pre></div></td><td class="code"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">urlencode_text</span><span class="p">(</span><span class="bp">None</span><span class="p">)</span>
-<span class="go">None</span>
+<div class="highlight-python"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9</pre></div></td><td class="code"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">urlencode_text</span><span class="p">(</span><span class="bp">None</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">urlencode_text</span><span class="p">(</span><span class="s">&quot;&quot;</span><span class="p">)</span>
-<span class="go">&quot;&quot;</span>
+<span class="go">&#39;&#39;</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">urlencode_text</span><span class="p">(</span><span class="s">&quot;a c&quot;</span><span class="p">)</span>
-<span class="go">&quot;a%20c&quot;</span>
+<span class="go">&#39;a%20c&#39;</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">urlencode_text</span><span class="p">(</span><span class="s">&quot;a&amp;c&quot;</span><span class="p">)</span>
-<span class="go">&quot;a%26c&quot;</span>
+<span class="go">&#39;a%26c&#39;</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">urlencode_text</span><span class="p">(</span><span class="s">&quot;a=c&quot;</span><span class="p">)</span>
-<span class="go">&quot;a%3Dc&quot;</span>
+<span class="go">&#39;a%3Dc&#39;</span>
 </pre></div>
 </td></tr></table></div>
 </dd></dl>
@@ -1318,7 +1189,8 @@ you list.  So the following:</p>
 </pre></div>
 </div>
 <p>turns into the regexp:</p>
-<div class="highlight-python"><pre>.*?(CVS|dev/pyblosxom)$</pre>
+<div class="highlight-python"><div class="highlight"><pre>.*?(CVS|dev/pyblosxom)$
+</pre></div>
 </div>
 <p>It will also skip all directories that start with a period.</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -1380,17 +1252,17 @@ implement the functionality required by the other rendering system.</p>
 debug module.</p>
 <dl class="class">
 <dt id="Pyblosxom.renderers.base.Renderer">
-<em class="property">class </em><tt class="descclassname">Pyblosxom.renderers.base.</tt><tt class="descname">Renderer</tt><big>(</big><em>request</em>, <em>stdoutput=&lt;open file '&lt;stdout&gt;'</em>, <em>mode 'w' at 0x40284078&gt;</em><big>)</big><a class="headerlink" href="#Pyblosxom.renderers.base.Renderer" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><tt class="descclassname">Pyblosxom.renderers.base.</tt><tt class="descname">Renderer</tt><big>(</big><em>request</em>, <em>stdoutput=&lt;open file '&lt;stdout&gt;'</em>, <em>mode 'w' at 0x2b478906d150&gt;</em><big>)</big><a class="headerlink" href="#Pyblosxom.renderers.base.Renderer" title="Permalink to this definition">¶</a></dt>
 <dd><p>This is a null renderer.</p>
 </dd></dl>
 
 <dl class="class">
 <dt id="Pyblosxom.renderers.base.RendererBase">
-<em class="property">class </em><tt class="descclassname">Pyblosxom.renderers.base.</tt><tt class="descname">RendererBase</tt><big>(</big><em>request</em>, <em>stdoutput=&lt;open file '&lt;stdout&gt;'</em>, <em>mode 'w' at 0x40284078&gt;</em><big>)</big><a class="headerlink" href="#Pyblosxom.renderers.base.RendererBase" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><tt class="descclassname">Pyblosxom.renderers.base.</tt><tt class="descname">RendererBase</tt><big>(</big><em>request</em>, <em>stdoutput=&lt;open file '&lt;stdout&gt;'</em>, <em>mode 'w' at 0x2b478906d150&gt;</em><big>)</big><a class="headerlink" href="#Pyblosxom.renderers.base.RendererBase" title="Permalink to this definition">¶</a></dt>
 <dd><p>Pyblosxom core handles the Input and Process of the system and
 passes the result of the process to the Renderers for output. All
 renderers are child classes of RendererBase. RenderBase will
-contain the public interfaces for all Renderer onject.</p>
+contain the public interfaces for all Renderer object.</p>
 <dl class="method">
 <dt id="Pyblosxom.renderers.base.RendererBase.addHeader">
 <tt class="descname">addHeader</tt><big>(</big><em>*args</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#Pyblosxom.renderers.base.RendererBase.addHeader" title="Permalink to this definition">¶</a></dt>
@@ -1562,7 +1434,7 @@ assists you nicely. For example:</p>
         <span class="n">renderer</span><span class="o">.</span><span class="n">rendered</span> <span class="o">=</span> <span class="mi">1</span>
 </pre></div>
 </td></tr></table></div>
-<p>This simple piece of pseudocode explains what you could do
+<p>This simple piece of pseudo-code explains what you could do
 with this method, though I highly don&#8217;t recommend this, unless
 pyblosxom is running continuously.</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -1594,10 +1466,11 @@ instance of an Entry class represents a single entry in the
 weblog, whether it came from a file, or a database, or even
 somewhere off the InterWeeb.</p>
 <p>EntryBase derivatives are dict-like except for one key difference:
-when doing <tt class="docutils literal"><span class="pre">__getitem__</span></tt> on a nonexistent key, it returns an
-empty string.  For example:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">entry</span><span class="p">[</span><span class="s">&quot;some_nonexistent_key&quot;</span><span class="p">]</span>
-<span class="go">&quot;&quot;</span>
+when doing <tt class="docutils literal"><span class="pre">__getitem__</span></tt> on a nonexistent key, it returns None by
+default.  For example:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">entry</span> <span class="o">=</span> <span class="n">EntryBase</span><span class="p">(</span><span class="s">&#39;some fake request&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="bp">None</span> <span class="o">==</span> <span class="n">entry</span><span class="p">[</span><span class="s">&quot;some_nonexistent_key&quot;</span><span class="p">]</span>
+<span class="go">True</span>
 </pre></div>
 </div>
 <dl class="method">
@@ -2018,8 +1891,8 @@ if you pass in None, then we&#8217;ll use localtime.</li>
     </div>
     <div class="footer">
         &copy; Copyright Creative Commons CC0 - http://creativecommons.org/publicdomain/zero/1.0/.
-      Last updated on Jul 31, 2013.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2b1.
+      Last updated on Jul 25, 2014.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
     </div>
   </body>
 </html>

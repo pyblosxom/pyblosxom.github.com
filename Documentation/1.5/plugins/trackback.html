@@ -81,24 +81,26 @@ trackback pings with arbitrary content to the URL of your choice:</p>
 </li>
 <li><p class="first">Now you need to advertise the trackback ping link.  Add this to your
 <tt class="docutils literal"><span class="pre">story</span></tt> template:</p>
-<div class="highlight-python"><pre>&lt;a href="$(base_url)/trackback/$(file_path)" title="Trackback"&gt;TB&lt;/a&gt;</pre>
+<div class="highlight-python"><div class="highlight"><pre>&lt;a href=&quot;$(base_url)/trackback/$(file_path)&quot; title=&quot;Trackback&quot;&gt;TB&lt;/a&gt;
+</pre></div>
 </div>
 </li>
 <li><p class="first">You can supply an embedded RDF description of the trackback ping, too.
 Add this to your <tt class="docutils literal"><span class="pre">story</span></tt> or <tt class="docutils literal"><span class="pre">comment-story</span></tt> template:</p>
-<div class="highlight-python"><pre>&lt;!--
+<div class="highlight-python"><div class="highlight"><pre>&lt;!--
 &lt;rdf:RDF
-xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-xmlns:dc="http://purl.org/dc/elements/1.1/"
-xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/"&gt;
+xmlns:rdf=&quot;http://www.w3.org/1999/02/22-rdf-syntax-ns#&quot;
+xmlns:dc=&quot;http://purl.org/dc/elements/1.1/&quot;
+xmlns:trackback=&quot;http://madskills.com/public/xml/rss/module/trackback/&quot;&gt;
 &lt;rdf:Description
-     about="$(base_url)/$(file_path)"
-     dc:title="$(title)"
-     dc:identifier="$(base_url)/$(file_path)"
-     trackback:ping="$(base_url)/trackback/$(file_path)"
+     about=&quot;$(base_url)/$(file_path)&quot;
+     dc:title=&quot;$(title)&quot;
+     dc:identifier=&quot;$(base_url)/$(file_path)&quot;
+     trackback:ping=&quot;$(base_url)/trackback/$(file_path)&quot;
 /&gt;
 &lt;/rdf:RDF&gt;
---&gt;</pre>
+--&gt;
+</pre></div>
 </div>
 </li>
 </ol>
@@ -173,8 +175,8 @@ xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/"&gt;
     </div>
     <div class="footer">
         &copy; Copyright Creative Commons CC0 - http://creativecommons.org/publicdomain/zero/1.0/.
-      Last updated on Jul 31, 2013.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2b1.
+      Last updated on Jul 25, 2014.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
     </div>
   </body>
 </html>

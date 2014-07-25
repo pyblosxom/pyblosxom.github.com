@@ -130,34 +130,36 @@ a Lighttpd web server with mod_fcgi installed.</p>
 </pre></div>
 </td></tr></table></div>
 <p>Don&#8217;t forget to make it executable by Lighttpd. I did it like this:</p>
-<div class="highlight-python"><pre>chown :www-data pyblosxom.wsgi
-chmod g+x pyblosxom.wsgi</pre>
+<div class="highlight-python"><div class="highlight"><pre>chown :www-data pyblosxom.wsgi
+chmod g+x pyblosxom.wsgi
+</pre></div>
 </div>
 <p>This way you change group ownership to the group that lighty belongs
 to and give all group members execution permission.</p>
 </li>
 <li><p class="first">Create /etc/lighttpd/conf-available/90-myblog.conf with this content:</p>
-<div class="highlight-python"><pre>server.modules += ( "mod_fastcgi" )
+<div class="highlight-python"><div class="highlight"><pre>server.modules += ( &quot;mod_fastcgi&quot; )
 
-$HTTP["host"] =~ "(^|\.*)yourhost\.com$" {
+$HTTP[&quot;host&quot;] =~ &quot;(^|\.*)yourhost\.com$&quot; {
 
 #### fastcgi module
 ## read fastcgi.txt for more info
-# this line may help with finding what's wrong, check out errorlog file
+# this line may help with finding what&#39;s wrong, check out errorlog file
 fastcgi.debug=1
 fastcgi.server = (
-        "/myblog" =&gt; (
-        "main" =&gt; (
-        "host" =&gt; "127.0.0.1",
-        "port" =&gt; 3033,
-        "check-local" =&gt; "disable",
-        "max-procs" =&gt; 1,
-        "bin-path" =&gt; "/path/to/pyblosxom.wsgi"
+        &quot;/myblog&quot; =&gt; (
+        &quot;main&quot; =&gt; (
+        &quot;host&quot; =&gt; &quot;127.0.0.1&quot;,
+        &quot;port&quot; =&gt; 3033,
+        &quot;check-local&quot; =&gt; &quot;disable&quot;,
+        &quot;max-procs&quot; =&gt; 1,
+        &quot;bin-path&quot; =&gt; &quot;/path/to/pyblosxom.wsgi&quot;
    )
   )
  )
 
-}</pre>
+}
+</pre></div>
 </div>
 <p>You must change <tt class="docutils literal"><span class="pre">yourhost.com</span></tt> to match your domain.</p>
 <p>Fascgi.debug line is useful for finding out why your app doesn&#8217;t work.
@@ -172,8 +174,9 @@ If you want it at root node (like <a class="reference external" href="http://you
 </li>
 <li><p class="first">Now you can enable and disable this part of configuration with
 <tt class="docutils literal"><span class="pre">lighttpd-enable-mod</span></tt> and <tt class="docutils literal"><span class="pre">lighttpd-disable-mod</span></tt>, so now do:</p>
-<div class="highlight-python"><pre>lighttpd-enable-mod myblog
-service lighttpd force-reload</pre>
+<div class="highlight-python"><div class="highlight"><pre>lighttpd-enable-mod myblog
+service lighttpd force-reload
+</pre></div>
 </div>
 </li>
 </ol>
@@ -249,8 +252,8 @@ configuration), you&#8217;ll have to force-reload configuration of Lighttpd.</p>
     </div>
     <div class="footer">
         &copy; Copyright Creative Commons CC0 - http://creativecommons.org/publicdomain/zero/1.0/.
-      Last updated on Jul 31, 2013.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2b1.
+      Last updated on Jul 25, 2014.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
     </div>
   </body>
 </html>
